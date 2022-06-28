@@ -1,0 +1,11 @@
+mixin figure (item) 
+   figure.card 
+      figcaption 
+         picture 
+            source(srcset=item.src + ".webp" type="image/webp") 
+            source(srcset=item.src + ".png" type="image/png") 
+            img(src=item.src + ".png" alt=item.alt) 
+         p.title= item.title
+         h2= item.price
+            i.currency  грн*
+         p.description= item.description

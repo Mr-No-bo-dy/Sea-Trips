@@ -1,0 +1,68 @@
+include components/vars 
+include components/mixins 
+
+doctype html
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      link(rel="stylesheet" href="css/styles.css")
+      title Sea Trips
+   body 
+      header 
+         .container-fluid 
+            .container 
+               .flex-between 
+                  .logo 
+                     picture 
+                        source
+                        img(src="img/logo.png", alt="logo")
+                     p trips
+                  .nav-group.header-menu 
+               h1 Морські пригоди 
+               p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+               .cta 
+                  a(href="#") детальніше
+               h2 обери свій план подорожі
+               p Наша фірма -лідер на ринку у своїй сфері
+               a.arrow(href="#main")
+      main#main 
+         .row 
+            .col-3 
+               h3 про нашу компанію
+               p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+               .cta 
+                  a(href="#") детальніше
+               p * - зверніть увагу, зміна ціни може залежати від курсу долара.
+            .col-3 
+               +figure(card.Bycicle)
+            .col-3 
+               +figure(card.Island)
+            .col-3 
+               +figure(card.Special)
+         hr 
+         .row 
+            .col-4 
+            .col-8 
+               .col-3
+               .col-5
+         .container-fluid
+            .container 
+               .row 
+                  .col-2 
+                  .col-2 
+               .row 
+                  .col-3 
+                  .col-3 
+                  .col-3 
+                  .col-3 
+               hr 
+      footer 
+         .row 
+            .col-3 
+            .col-3 
+            .col-3 
+            .col-3 
+         .container-fluid
+            .copyright
