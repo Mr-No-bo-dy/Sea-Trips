@@ -2,7 +2,7 @@ include components/vars
 include components/mixins 
 
 doctype html
-html(lang="en")
+html(lang="uk")
    head
       meta(charset="UTF-8")
       meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -15,9 +15,10 @@ html(lang="en")
             .container 
                .d-flex.justify-content-between 
                   .logo 
-                     picture 
-                        img(src="img/logo.png", alt="logo")
-                     p.in-logo trips
+                     a(href="index.html") 
+                        picture 
+                           img(src="img/logo.png", alt="logo")
+                        p.in-logo trips
                   .header-menu 
                      +menu(navMenu)
                h1 Морські пригоди 
