@@ -11,59 +11,116 @@ html(lang="en")
       title Sea Trips
    body 
       header 
-         .container-fluid 
+         .container-fluid.bg-header 
             .container 
-               .flex-between 
+               .d-flex.justify-content-between 
                   .logo 
                      picture 
                         img(src="img/logo.png", alt="logo")
-                     p trips
-                  .nav-group.header-menu 
+                     p.in-logo trips
+                  .header-menu 
+                     +menu(navMenu)
                h1 Морські пригоди 
                p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
-               .cta 
+               .btn.btn-warning.cta 
                   a(href="#") детальніше
                h2 обери свій план подорожі
                p Наша фірма -лідер на ринку у своїй сфері
-               a.arrow(href="#main")
+               a.arrows(href="#main") >>
       main#main 
-         .row 
-            .col-3 
-               h3 про нашу компанію
-               p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-               .cta 
-                  a(href="#") детальніше
-               p * - зверніть увагу, зміна ціни може залежати від курсу долара.
-            .col-3 
-               +figure(card.Bycicle)
-            .col-3 
-               +figure(card.Island)
-            .col-3 
-               +figure(card.Special)
-         hr 
-         .row 
-            .col-4 
-            .col-8 
-               .col-3
-               .col-5
-         .container-fluid
+         .container 
+            .row 
+               .col-3 
+                  h2 про нашу компанію
+                  p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                  .btn.btn-warning.cta 
+                     a(href="#") детальніше
+                  p * - зверніть увагу, зміна ціни може залежати від курсу долара.
+               .col-9
+                  .row
+                     .col-4 
+                        +figureTop(cardTop.Bycicle)
+                     .col-4 
+                        +figureTop(cardTop.Island)
+                     .col-4 
+                        +figureTop(cardTop.Special)
+                  .btn.btn-outline-primary.cta.ctaBig
+                     a(href="#") дивитись усі плани
+                        .arrow
+            hr 
+            .row 
+               .col-4 
+                  .island 
+                     picture 
+                        source(srcset="img/island.webp", type="webp")
+                        source(srcset="img/island.jpg", type="jpg")
+                        img(src="img/island.jpg", alt="island")
+               .col-8 
+                  h2 Дивовижний безлюдний острів, який зводить людей з розуму
+                  .row
+                     .col-8
+                        p Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                        .btn.btn-warning.cta 
+                           a(href="#") замовити тур
+                        .btn.btn-warning.cta 
+                           a(href="#") детальніше
+                     .col-4
+                        h3 575 грн./день
+                        p В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+         .container-fluid.bg-main
             .container 
                .row 
-                  .col-2 
-                  .col-2 
+                  .col-6
+                     h2 СПІЙМАЙ ХВИЛЮ 
+                     h2 ЖИВИ ЯСКРАВО!
+                     p Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                     .btn.btn-warning.cta 
+                        a(href="#") детальніше
+                  .col-6 
+                     picture 
+                        img(src="img/''.png", alt="''")
+                     p Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи.
+                     p 
+                        b Олег Набережний
+                     p клієнт
+                     picture                         
+                        source(srcset="img/client.webp", type="webp")
+                        source(srcset="img/client.jpg", type="jpg")
+                        img(src="img/client.jpg", alt="client")
+               h2 Спеціальні пропозиції тижня 
+               p 
+                  i Гарячі праозиції, по-швидше обирай і поїхали!
                .row 
                   .col-3 
+                     +figureBottom(cardBottom.Romantic)
                   .col-3 
+                     +figureBottom(cardBottom.Bycicle)
                   .col-3 
+                     +figureBottom(cardBottom.Islands)
                   .col-3 
+                     +figureBottom(cardBottom.Surfing)
                hr 
       footer 
-         .row 
-            .col-3 
-            .col-3 
-            .col-3 
-            .col-3 
-         .container-fluid
-            .copyright
+         .container 
+            .row 
+               .col-3 
+                  h2 додаткова інформація
+               .col-3 
+                  +figureFooter(cardFooter.Schedule)
+               .col-3 
+                  +figureFooter(cardFooter.Info)
+               .col-3 
+                  h3 задати питання
+                  p Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                  a(href="tel:+380505698511") +38 (050) 56 98 511
+                  p 
+                     b Анна Миколаївна
+                  p консультант
+                  picture                         
+                     source(srcset="img/consult.webp", type="webp")
+                     source(srcset="img/consult.jpg", type="jpg")
+                     img(src="img/consult.jpg", alt="consult")
+         .container-fluid.bg-footer
+            p.container.copyright &copy; 2016 Cars.com All rights reserved.
 
       <script src="js/scripts.js"></script>

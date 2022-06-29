@@ -1,5 +1,14 @@
-mixin figure (item) 
-   figure.card 
+mixin menu (items) 
+   nav 
+      .hamburger
+         span
+      ul.nav 
+         for item in items 
+            li 
+               a(href=item.url) #{item.name} 
+
+mixin figureTop (item) 
+   figure.cardTop 
       figcaption 
          picture 
             source(srcset=item.src + ".webp" type="image/webp") 
@@ -9,3 +18,31 @@ mixin figure (item)
          h2= item.price
             i.currency  грн*
          p.description= item.description
+
+mixin figureBottom (item) 
+   figure.cardBottom 
+      figcaption 
+         picture 
+            source(srcset=item.src + ".webp" type="image/webp") 
+            source(srcset=item.src + ".png" type="image/png") 
+            img(src=item.src + ".png" alt=item.alt) 
+         p.title= item.title
+         p.description= item.description
+         h2= item.price
+            i.currency  грн*
+         a.btn.btn-outline-warning.ctaSmall(href="#") замовити
+            .arrow
+
+mixin figureFooter (item) 
+   figure.cardFooter 
+      figcaption 
+         picture                         
+            source(srcset="img/paper.webp", type="webp")
+            source(srcset="img/paper.jpg", type="jpg")
+            img(src="img/paper.jpg", alt="paper")
+         p.title= item.title
+         p= "Розмір файла: " + item.size
+         p.description= item.description
+            i.currency  грн*
+         a.btn.btn-outline-warning.ctaSmall(href="#") скачати
+            .cloud
