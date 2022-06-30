@@ -22,7 +22,7 @@ mixin figureTop (item)
 mixin figureMiddle (item) 
    figure.cardMiddle 
       figcaption 
-         picture 
+         picture.pic 
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
@@ -30,8 +30,8 @@ mixin figureMiddle (item)
          p.description= item.description
          h2= item.price
             i.currency  грн*
-         a.btn.btn-outline-warning.cta.ctaSmall(href="#") замовити
-            .arrow
+         a.btn.rounded-pill.btn.rounded-pill-outline-warning.cta.ctaSmall(href="#") замовити
+            span.arrow
 
 mixin figureBottom (item) 
    figure.cardBottom 
@@ -44,5 +44,5 @@ mixin figureBottom (item)
          p= "Розмір файла: " + item.size
          p.description= item.description
             i.currency  грн*
-         a.btn.btn-outline-warning.cta.ctaSmall(href="#") скачати
-            .cloud
+         a.btn.rounded-pill.btn.rounded-pill-outline-warning.cta.ctaSmall(href="#") скачати
+            span.cloud

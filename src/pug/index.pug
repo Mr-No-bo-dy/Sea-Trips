@@ -6,7 +6,7 @@ html(lang="uk")
    head
       meta(charset="UTF-8")
       meta(http-equiv="X-UA-Compatible" content="IE=edge")
-      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      meta(name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0")
       link(rel="stylesheet" href="css/styles.css")
       title Sea Trips
    body.bg-light 
@@ -23,7 +23,7 @@ html(lang="uk")
                      +menu(navMenu)
                h1 Морські пригоди 
                p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
-               a.btn.btn-warning.cta(href="#") детальніше
+               a.btn.rounded-pill.btn-warning.cta(href="#") детальніше
                h2 обери свій план подорожі
                p Наша фірма -лідер на ринку у своїй сфері
                a.arrows(href="#main") >>
@@ -33,7 +33,7 @@ html(lang="uk")
                .col-3 
                   h2 про нашу компанію
                   p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-                  a.btn.btn-warning.cta(href="#") детальніше
+                  a.btn.rounded-pill.btn-warning.cta(href="#") детальніше
                   p * - зверніть увагу, зміна ціни може залежати від курсу долара.
                .col-9
                   .row
@@ -43,23 +43,23 @@ html(lang="uk")
                         +figureTop(cardTop.Island)
                      .col-4 
                         +figureTop(cardTop.Special)
-                  a.btn.btn-outline-primary.cta.ctaBig(href="#") дивитись усі плани
+                  a.btn.rounded-pill.btn-outline-primary.cta.ctaBig(href="#") дивитись усі плани
                         .arrow
             hr 
             .row 
                .col-5 
                   .island 
-                     picture 
+                     picture.pic 
                         source(srcset="img/island.webp", type="webp")
-                        source(srcset="img/island.png", type="png")
-                        img(src="img/island.png", alt="island")
+                        source(srcset="img/island.jpg", type="jpg")
+                        img(src="img/island.jpg", alt="island")
                .col-7 
                   h2 Дивовижний безлюдний острів, який зводить людей з розуму
                   .row
                      .col-8
                         p Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
-                        a.btn.btn-warning.cta(href="#") замовити тур
-                        a.btn.btn-warning.cta(href="#") детальніше
+                        a.btn.rounded-pill.btn-warning.cta(href="#") замовити тур
+                        a.btn.rounded-pill.btn-warning.cta(href="#") детальніше
                      .col-4
                         h3 575 грн./день
                         p В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
@@ -70,7 +70,7 @@ html(lang="uk")
                      h2 СПІЙМАЙ ХВИЛЮ 
                      h2 ЖИВИ ЯСКРАВО!
                      p Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
-                     a.btn.btn-warning.cta(href="#") детальніше
+                     a.btn.rounded-pill.btn-warning.cta(href="#") детальніше
                   .col-6 
                      picture 
                         img(src="img/''.png", alt="''")
@@ -118,6 +118,6 @@ html(lang="uk")
       footer 
          .container-fluid.bg-footer 
          .container-fluid.bg-dark 
-            p.container.copyright.text-white &copy; 2016 Cars.com All rights reserved.
+            p.container.m-0.copyright.text-white &copy; 2016 Cars.com All rights reserved.
 
       <script src="js/scripts.js"></script>

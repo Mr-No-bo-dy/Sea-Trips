@@ -5,7 +5,11 @@
    margin: 0
 
 html
-   font-size: 10px
+   font-size: 7px
+   +media(768)
+      font-size: 8.5px
+   +media(1280)
+      font-size: 10px
    scroll-behavior: smooth
 
 body
@@ -21,10 +25,12 @@ ul
    max-width: 1170px
 
 .bg-header 
-   background: url(../img/bg-header-2.png) no-repeat center/100% 
+   background: url(../img/bg-header-2.jpg) no-repeat center/cover 
+
+.cta 
+   +ctaStyle
 
 .in-logo, 
-.cta,
 .arrows  
    display: inline-block
 
@@ -33,8 +39,15 @@ ul
    height: 20px
 
 .bg-main 
-   background: url(../img/bg-main-2a.png) no-repeat center/100%
+   background: url(../img/bg-main-2a.jpg) no-repeat center/cover
 
+// .island>, 
+// .figure>
+picture.pic 
+   img
+      width: 100%
+   
 .bg-footer 
-   min-height: 400px
-   background: url(../img/bg-footer-2.png) no-repeat center/100%
+   // min-height: 370px
+   padding-top: 370px
+   background: url(../img/bg-footer-2.jpg) no-repeat center/cover
