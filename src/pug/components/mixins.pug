@@ -30,7 +30,7 @@ mixin figureMiddle (item)
          p.description= item.description
          h2= item.price
             i.currency  грн*
-         a.btn.btn-outline-warning.ctaSmall(href="#") замовити
+         a.btn.btn-outline-warning.cta.ctaSmall(href="#") замовити
             .arrow
 
 mixin figureBottom (item) 
@@ -44,5 +44,5 @@ mixin figureBottom (item)
          p= "Розмір файла: " + item.size
          p.description= item.description
             i.currency  грн*
-         a.btn.btn-outline-warning.ctaSmall(href="#") скачати
+         a.btn.btn-outline-warning.cta.ctaSmall(href="#") скачати
             .cloud

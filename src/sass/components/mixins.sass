@@ -1,0 +1,81 @@
+=ctaStyle ($header:false, $footer:false)
+   display: inline-block
+   padding: 17px
+   width: 190px
+   box-sizing: border-box
+   font-weight: 700
+   font-size: 1.2rem
+   letter-spacing: 1px
+   text-transform: uppercase
+   text-decoration: none
+   border-radius: 25px
+   color: #c2c9db
+   border: 1px solid #d7dbe8
+   background-color: #fff
+   &:hover 
+      color: #fff
+      border: 1px solid transparent
+      background-color: #6e45e2
+   @if $header
+      width: 150px
+      color: #fff
+      border: 1px solid #fff
+      background-color: transparent
+      &:hover
+         background-color: #6e45e2
+   @if $footer 
+      width: 150px
+      color: #fff
+      background-color: #6e45e2
+      &:hover 
+         color: #6e45e2
+         border: 1px solid #6e45e2
+         background-color: #fff
+
+
+=cardStyle 
+   padding: 30px 36px
+   +media(768)
+      padding: 4vw
+   +media(1440)
+      padding: 60px 72px 65px
+   max-width: 440px
+   max-height: 650px
+   box-sizing: border-box
+   border-radius: 30px
+   background-color: #fff
+   border: 1px solid #d7dbe8
+   picture 
+      display: inline-flex
+      align-items: center
+      height: 110px
+   p.type 
+      margin-top: 35px
+      color: #9fa4af
+   p.sup 
+      display: inline-block
+      vertical-align: top
+      color: #4f4f6f
+      font-weight: 500
+      font-size: 1.6rem
+      line-height: 3.19em
+      letter-spacing: 0
+   h2 
+      display: inline-block
+      color: #4f4f6f
+      transform: scale(1)
+      i.term
+         font-size: 0.27em
+         font-style: normal
+         letter-spacing: 0
+   p.description 
+      margin: 5px 0 15px
+      +media(425)
+         margin: 1vw 0 3vw
+      +media(1440)
+         margin: 15px 0 45px
+      color: #9fa4af
+   a
+      box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
+      &:hover
+         box-shadow: none
