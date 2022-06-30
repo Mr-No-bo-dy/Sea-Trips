@@ -9,10 +9,10 @@ html(lang="uk")
       meta(name="viewport" content="width=device-width, initial-scale=1.0")
       link(rel="stylesheet" href="css/styles.css")
       title Sea Trips
-   body 
+   body.bg-light 
       header 
          .container-fluid.bg-header 
-            .container 
+            .container.mx-auto 
                .d-flex.justify-content-between 
                   .logo 
                      a(href="index.html") 
@@ -29,7 +29,7 @@ html(lang="uk")
                p Наша фірма -лідер на ринку у своїй сфері
                a.arrows(href="#main") >>
       main#main 
-         .container 
+         .container.mx-auto 
             .row 
                .col-3 
                   h2 про нашу компанію
@@ -50,13 +50,13 @@ html(lang="uk")
                         .arrow
             hr 
             .row 
-               .col-4 
+               .col-5 
                   .island 
                      picture 
                         source(srcset="img/island.webp", type="webp")
-                        source(srcset="img/island.jpg", type="jpg")
-                        img(src="img/island.jpg", alt="island")
-               .col-8 
+                        source(srcset="img/island.png", type="png")
+                        img(src="img/island.png", alt="island")
+               .col-7 
                   h2 Дивовижний безлюдний острів, який зводить людей з розуму
                   .row
                      .col-8
@@ -69,7 +69,7 @@ html(lang="uk")
                         h3 575 грн./день
                         p В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
          .container-fluid.bg-main
-            .container 
+            .container.mx-auto 
                .row 
                   .col-6
                      h2 СПІЙМАЙ ХВИЛЮ 
@@ -86,30 +86,30 @@ html(lang="uk")
                      p клієнт
                      picture                         
                         source(srcset="img/client.webp", type="webp")
-                        source(srcset="img/client.jpg", type="jpg")
-                        img(src="img/client.jpg", alt="client")
-               h2 Спеціальні пропозиції тижня 
-               p 
-                  i Гарячі праозиції, по-швидше обирай і поїхали!
-               .row 
-                  .col-3 
-                     +figureBottom(cardBottom.Romantic)
-                  .col-3 
-                     +figureBottom(cardBottom.Bycicle)
-                  .col-3 
-                     +figureBottom(cardBottom.Islands)
-                  .col-3 
-                     +figureBottom(cardBottom.Surfing)
-               hr 
-      footer 
-         .container 
+                        source(srcset="img/client.png", type="png")
+                        img(src="img/client.png", alt="client")
+         .container.mx-auto 
+            h2 Спеціальні пропозиції тижня 
+            p 
+               i Гарячі праозиції, по-швидше обирай і поїхали!
+            .row 
+               .col-3 
+                  +figureMiddle(cardMiddle.Romantic)
+               .col-3 
+                  +figureMiddle(cardMiddle.Bycicle)
+               .col-3 
+                  +figureMiddle(cardMiddle.Islands)
+               .col-3 
+                  +figureMiddle(cardMiddle.Surfing)
+            hr 
+         .container.mx-auto 
             .row 
                .col-3 
                   h2 додаткова інформація
                .col-3 
-                  +figureFooter(cardFooter.Schedule)
+                  +figureBottom(cardBottom.Schedule)
                .col-3 
-                  +figureFooter(cardFooter.Info)
+                  +figureBottom(cardBottom.Info)
                .col-3 
                   h3 задати питання
                   p Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
@@ -119,9 +119,11 @@ html(lang="uk")
                   p консультант
                   picture                         
                      source(srcset="img/consult.webp", type="webp")
-                     source(srcset="img/consult.jpg", type="jpg")
-                     img(src="img/consult.jpg", alt="consult")
-         .container-fluid.bg-footer
-            p.container.copyright &copy; 2016 Cars.com All rights reserved.
+                     source(srcset="img/consult.png", type="png")
+                     img(src="img/consult.png", alt="consult")
+      footer 
+         .container-fluid.bg-footer 
+         .container-fluid.bg-dark 
+            p.container.copyright.text-white &copy; 2016 Cars.com All rights reserved.
 
       <script src="js/scripts.js"></script>

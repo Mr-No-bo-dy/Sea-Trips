@@ -4,8 +4,8 @@ mixin menu (items)
          span
       ul.nav 
          for item in items 
-            li.p-3 
-               a.text-uppercase(href=item.url) #{item.name} 
+            li.m-3 
+               a.text-white.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
 
 mixin figureTop (item) 
    figure.cardTop 
@@ -19,8 +19,8 @@ mixin figureTop (item)
             i.currency  грн*
          p.description= item.description
 
-mixin figureBottom (item) 
-   figure.cardBottom 
+mixin figureMiddle (item) 
+   figure.cardMiddle 
       figcaption 
          picture 
             source(srcset=item.src + ".webp" type="image/webp") 
@@ -33,13 +33,13 @@ mixin figureBottom (item)
          a.btn.btn-outline-warning.ctaSmall(href="#") замовити
             .arrow
 
-mixin figureFooter (item) 
-   figure.cardFooter 
+mixin figureBottom (item) 
+   figure.cardBottom 
       figcaption 
          picture                         
             source(srcset="img/paper.webp", type="webp")
-            source(srcset="img/paper.jpg", type="jpg")
-            img(src="img/paper.jpg", alt="paper")
+            source(srcset="img/paper.png", type="png")
+            img(src="img/paper.png", alt="paper")
          p.title= item.title
          p= "Розмір файла: " + item.size
          p.description= item.description
