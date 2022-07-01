@@ -1,20 +1,22 @@
 @import components/bootstrap.min
+@import components/fonts
 @import components/mixins
 
 *
    margin: 0
 
 html
-   font-size: 7px
+   font-size: 8px
    +media(768)
-      font-size: 8.5px
+      font-size: 9px
    +media(1280)
       font-size: 10px
    scroll-behavior: smooth
 
 body
-   font-family: "Exo2.0", "Rubik", "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
+   font-family: "Rubik", "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
    text-align: center
+   background-color: #f5f8fa
    scroll-behavior: smooth
 
 ul
@@ -30,24 +32,50 @@ ul
 .cta 
    +ctaStyle
 
-.in-logo, 
-.arrows  
-   display: inline-block
+.cardTop 
+   +cardStyle
+   
+.ctaBottom 
+   +ctaStyle($figureBottom:true)
 
-.arrows
+.in-logo
+   color: #fff
+   font: 500 3.6rem "Exo 2"
+
+.logo:hover
+   img 
+      filter: contrast(110%)
+   .in-logo
+      color: #ffb700
+
+.header-menu
+   a 
+      color: #fff
+      &:hover 
+         color: #ffb700
+
+.arrows  
    width: 20px
    height: 20px
 
 .bg-main 
    background: url(../img/bg-main-2a.jpg) no-repeat center/cover
 
-// .island>, 
-// .figure>
 picture.pic 
    img
       width: 100%
-   
+
+.ctaBottom 
+   position: relative
+   span.cloud
+      position: absolute
+      display: inline-block
+      top: .7rem
+      left: 1.5rem
+      width: 15px
+      height: 11px
+      background: url(../img/cloud.png) no-repeat center
+
 .bg-footer 
-   // min-height: 370px
    padding-top: 370px
    background: url(../img/bg-footer-2.jpg) no-repeat center/cover

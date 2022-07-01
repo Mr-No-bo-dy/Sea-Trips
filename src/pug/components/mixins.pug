@@ -4,45 +4,46 @@ mixin menu (items)
          span
       ul.nav 
          for item in items 
-            li.m-3 
-               a.text-white.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
+            li.ms-5 
+               a.py-2.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
 
 mixin figureTop (item) 
-   figure.cardTop 
-      figcaption 
-         picture 
+   figure.card.cardTop 
+      figcaption.card-body 
+         picture.card-img-top 
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
-         p.title= item.title
-         h2= item.price
+         p.card-subtitle.title= item.title
+         h2.card-title= item.price
             i.currency  грн*
-         p.description= item.description
+         p.card-text.description= item.description
 
 mixin figureMiddle (item) 
-   figure.cardMiddle 
-      figcaption 
-         picture.pic 
-            source(srcset=item.src + ".webp" type="image/webp") 
-            source(srcset=item.src + ".png" type="image/png") 
-            img(src=item.src + ".png" alt=item.alt) 
+   figure.card.cardMiddle 
+      picture.card-img-top.pic 
+         source(srcset=item.src + ".webp" type="image/webp") 
+         source(srcset=item.src + ".jpg" type="image/jpg") 
+         img(src=item.src + ".jpg" alt=item.alt) 
+      figcaption.card-body 
          p.title= item.title
-         p.description= item.description
-         h2= item.price
+         p.card-text.description= item.description
+         h2.card-title= item.price
             i.currency  грн*
-         a.btn.rounded-pill.btn.rounded-pill-outline-warning.cta.ctaSmall(href="#") замовити
+         a.aYellow(href="#") замовити
             span.arrow
 
 mixin figureBottom (item) 
-   figure.cardBottom 
-      figcaption 
-         picture                         
-            source(srcset="img/paper.webp", type="webp")
-            source(srcset="img/paper.png", type="png")
-            img(src="img/paper.png", alt="paper")
-         p.title= item.title
-         p= "Розмір файла: " + item.size
-         p.description= item.description
-            i.currency  грн*
-         a.btn.rounded-pill.btn.rounded-pill-outline-warning.cta.ctaSmall(href="#") скачати
-            span.cloud
+   figure.card.cardBottom 
+      figcaption.card-body 
+         picture.card-img.pic                         
+            source(srcset=item.src + ".webp" type="image/webp") 
+            source(srcset=item.src + ".jpg" type="image/jpg") 
+            img(src=item.src + ".jpg" alt=item.alt) 
+         .card-img-overlay
+            p.card-title.title= item.title
+            p= "Розмір файла: " + item.size
+            p.card-text.description= item.description
+               i.currency  грн*
+            a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href="#") скачати
+               span.cloud
