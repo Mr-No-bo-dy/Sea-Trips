@@ -9,33 +9,32 @@ mixin menu (items)
 
 mixin figureTop (item) 
    figure.card.cardTop 
-      figcaption.card-body 
+      figcaption 
          picture.card-img-top 
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
-         p.card-subtitle.title= item.title
-         h2.card-title= item.price
-            i.currency  грн*
-         p.card-text.description= item.description
+         p.card-subtitle.c333.title= item.title
+         h3.price.card-title.m-0= item.price + " грн*"
+         p.card-text.text-start.c999.description= item.description
 
 mixin figureMiddle (item) 
-   figure.card.cardMiddle 
+   figure.card.cardMiddle.text-start 
       picture.card-img-top.pic 
          source(srcset=item.src + ".webp" type="image/webp") 
          source(srcset=item.src + ".jpg" type="image/jpg") 
          img(src=item.src + ".jpg" alt=item.alt) 
-      figcaption.card-body 
-         p.title= item.title
-         p.card-text.description= item.description
-         h2.card-title= item.price
-            i.currency  грн*
-         a.aYellow(href="#") замовити
-            span.arrow
+      figcaption.cardMiddleBody 
+         p.c333.title= item.title
+         p.c999.card-text.description= item.description
+         .d-flex.justify-content-between
+            h3.price.card-title.m-0= item.price + " грн"
+            a.aYellow.my-4(href="#") замовити
+               span.arrow
 
 mixin figureBottom (item) 
    figure.card.cardBottom 
-      figcaption.card-body 
+      figcaption 
          picture.card-img.pic                         
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".jpg" type="image/jpg") 
