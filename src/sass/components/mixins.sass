@@ -34,9 +34,8 @@
 
 =cardStyle($middle:false)
    padding: 3rem
-   // max-width: 27rem
-   width: 27rem
-   height: 27rem
+   // width: 27rem
+   // height: 27rem
    box-sizing: border-box
    border: none
    border-radius: 0
@@ -64,8 +63,33 @@
    //       padding: 2.5rem 2rem
 
    // max-width: 27rem
+
+=triangle 
+   position: relative
+   &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 6rem
+      height: 6rem
+      background: url(../img/triangle.png) no-repeat center/contain
+      z-index: 2
+
+=vrow
+   position: relative
+   &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0      
+      width: 6rem
+      height: 19rem
+      background: url(../img/vr.png) no-repeat center/contain
+      z-index: 1
+
 =cardMiddleStyle
-   width: 27rem
+   // width: 27rem
    box-sizing: border-box
    border: none
    border-radius: 0

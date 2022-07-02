@@ -8,7 +8,7 @@ mixin menu (items)
                a.py-2.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
 
 mixin figureTop (item) 
-   figure.card.cardTop 
+   figure(class="card cardTop " + item.class)
       figcaption 
          picture.card-img-top 
             source(srcset=item.src + ".webp" type="image/webp") 
@@ -19,7 +19,7 @@ mixin figureTop (item)
          p.card-text.text-start.c999.description= item.description
 
 mixin figureMiddle (item) 
-   figure.card.cardMiddle.text-start 
+   figure(class="card cardMiddle " + item.class)
       picture.card-img-top.pic 
          source(srcset=item.src + ".webp" type="image/webp") 
          source(srcset=item.src + ".jpg" type="image/jpg") 
@@ -41,7 +41,7 @@ mixin figureBottom (item)
             img(src=item.src + ".jpg" alt=item.alt) 
          .card-img-overlay
             .d-flex.gap-3
-               .paper
+               .paper.flex-shrink-0
                .file
                   p.card-title.title= item.title
                   p.cbbb= "Розмір файла: " + item.size
