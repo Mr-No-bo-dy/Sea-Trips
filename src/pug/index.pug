@@ -74,7 +74,7 @@ html(lang="uk")
                   .col-6 
                      picture 
                         img(src="img/''.png", alt="''")
-                     p.comment.fst-italic Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи.
+                     p.comment.mx-auto.text-start.fst-italic Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи.
                      p 
                         b Олег Набережний
                      p.client.c999 клієнт
@@ -95,7 +95,7 @@ html(lang="uk")
                .col-3 
                   +figureMiddle(cardMiddle.Surfing)
             hr 
-         .container.mx-auto 
+         .container.info.mx-auto 
             .row 
                .col-3 
                   h2.c_h2.text-uppercase додаткова інформація
@@ -104,12 +104,11 @@ html(lang="uk")
                .col-3 
                   +figureBottom(cardBottom.Info)
                .col-3 
-                  h3 задати питання
-                  p Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
-                  a(href="tel:+380505698511") +38 (050) 56 98 511
-                  p 
-                     b Анна Миколаївна
-                  p консультант
+                  p.c333.question задати питання
+                  p.c999.mx-auto Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                  a.c0099ff(href="tel:+380505698511") +38 (050) 56 98 511
+                  p.name.c333 Анна Миколаївна
+                  p.c999.mx-auto.consultant консультант
                   picture                         
                      source(srcset="img/consult.webp", type="webp")
                      source(srcset="img/consult.png", type="png")
@@ -117,6 +116,6 @@ html(lang="uk")
       footer 
          .container-fluid.bg-footer 
          .container-fluid.bg-dark 
-            p.container.m-0.mx-auto.copyright.text-white &copy; 2016 Cars.com All rights reserved.
+            p.container.m-0.mx-auto.copyright &copy; 2016 Cars.com All rights reserved.
 
       <script src="js/scripts.js"></script>

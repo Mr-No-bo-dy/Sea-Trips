@@ -80,13 +80,17 @@ p.c555
    line-height: 1.375em
 
 p.cbbb, 
-p.c999
+p.c999,
+.c_fefefe
    color: #bbb
    font-size: 1.3rem
    line-height: 1.46em
 
 p.c999 
    color: #999
+
+p.c_fefefe 
+   color: #fefefe
 
 .arrows  
    width: 20px
@@ -154,8 +158,18 @@ h2.special
    // +cardStyle($middle:true)
    +cardMiddleStyle
 
+.cardBottom 
+   color: #fff
+   .card-img-overlay
+      padding: 3rem 2rem
+
+.paper
+   width: 34px
+   height: 42px
+   background: url(../img/paper.png) no-repeat center
+   
 .ctaBottom 
-   +ctaStyle($figureBottom:true)
+   +ctaStyle($ctaBottom:true)
    position: relative
    span.cloud
       position: absolute
@@ -166,6 +180,38 @@ h2.special
       height: 11px
       background: url(../img/cloud.png) no-repeat center
 
+.info 
+   h2 
+      line-height: 1.11em
+      letter-spacing: 1px
+   .question 
+      font-size: 1.8rem
+      line-height: 1.44em
+      letter-spacing: 1px
+   p.c999 
+      max-width: 15rem
+      line-height: 1.23em
+   a.c0099ff 
+      cursor: pointer
+      color: #0099ff
+      font-size: 1.8rem
+      line-height: 1.44em
+      text-transform: uppercase
+      text-decoration: none
+      &:hover
+         color: #0088ff
+   .name 
+      margin: 1rem 0 0 0
+   .consultant 
+      font-family: "PT Sans"
+      line-height: 1.46em
+
 .bg-footer 
    padding-top: 370px
    background: url(../img/bg-footer-2.jpg) no-repeat center/cover
+
+.copyright 
+   padding: 1.5rem
+   color: #fff
+   font-size: 1.3rem
+   line-height: 1.46em

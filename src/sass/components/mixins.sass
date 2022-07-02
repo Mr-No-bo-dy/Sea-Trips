@@ -2,7 +2,7 @@
    @media screen and (min-width: #{$size}px)
       @content
 
-=ctaStyle ($figureBottom:false)
+=ctaStyle ($ctaBottom:false)
    display: inline-block
    padding: 0.9rem 2.7rem
    color: #fefefe
@@ -17,20 +17,25 @@
       color: #0099ff
       border-color: #0099ff
       background-color: #fefefe
-   @if $figureBottom
+   @if $ctaBottom
       padding: 0.5rem 1.8rem 0.5rem 3.4rem
       font-size: 1.2rem
       color: #ffb700
       border: 2px solid #ffb700
       background-color: transparent
       &:hover
-         color: #fff
-         border-color: #fff
-         background-color: #0099ff
+         transform: scale(1.1)
+         color: #ffb700
+         border-color: #ffb700
+         background-color: #fff
+         // color: #fff
+         // border-color: #fff
+         // background-color: #0099ff
 
-=cardStyle($middle:false, $Bottom:false)
+=cardStyle($middle:false)
    padding: 3rem
-   max-width: 27rem
+   // max-width: 27rem
+   width: 27rem
    height: 27rem
    box-sizing: border-box
    border: none
@@ -58,22 +63,20 @@
    //    .cardMiddleBody
    //       padding: 2.5rem 2rem
 
-   // @if $Bottom
-
+   // max-width: 27rem
 =cardMiddleStyle
-   max-width: 27rem
+   width: 27rem
    box-sizing: border-box
    border: none
    border-radius: 0
    background-color: transparent
-   picture 
-      min-height: 19rem
    .cardMiddleBody
-      padding: 2.5rem 2rem
+      padding: 2rem 2rem 1rem
    p.title 
       font-size: 1.8rem
       line-height: 1.44em
    p.c999 
+      margin: 0
       color: #999
    &:hover
       background-color: #fff

@@ -33,16 +33,18 @@ mixin figureMiddle (item)
                span.arrow
 
 mixin figureBottom (item) 
-   figure.card.cardBottom 
+   figure.card.cardBottom.text-start  
       figcaption 
          picture.card-img.pic                         
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".jpg" type="image/jpg") 
             img(src=item.src + ".jpg" alt=item.alt) 
          .card-img-overlay
-            p.card-title.title= item.title
-            p= "Розмір файла: " + item.size
-            p.card-text.description= item.description
-               i.currency  грн*
-            a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href="#") скачати
+            .d-flex.gap-3
+               .paper
+               .file
+                  p.card-title.title= item.title
+                  p.cbbb= "Розмір файла: " + item.size
+            p.c_fefefe.card-text.description= item.description
+            a.btn.rounded-pill.btn.rounded-pill.ctaBottom.mt-4(href="#") скачати
                span.cloud
