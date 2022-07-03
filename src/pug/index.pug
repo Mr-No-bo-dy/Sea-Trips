@@ -21,14 +21,16 @@ html(lang="uk")
                         p.mx-2.in-logo.d-inline-block trips
                   .header-menu 
                      +menu(navMenu)
-               .frame.frameTop.mx-auto
-               h1.text-uppercase Морські пригоди 
-               p.mx-auto.fst-italic Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
-               a.btn.rounded-pill.cta(href="#") детальніше
-               .frame.frameBottom.mx-auto
+               .header-header-wraper
+                  .frame-header.frameTop.mx-auto
+                  h1.text-uppercase Морські пригоди 
+                  p.mx-auto.fst-italic Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                  a.btn.rounded-pill.cta(href="#") детальніше
+                  .frame-header.frameBottom.mx-auto
                h2.c_h2.mx-auto.text-uppercase обери свій план подорожі
                p.mx-auto.c333.fst-italic Наша фірма - лідер на ринку у своїй сфері
-               a.d-inline-block.arrows(href="#main") >>
+               a.mx-auto.arrows(href="#main") 
+                  a.mx-auto.arrows.arrows-2(href="#main")
       main#main 
          .container.mx-auto 
             .row 
@@ -45,8 +47,7 @@ html(lang="uk")
                         +figureTop(cardTop.Island)
                      .col-4 
                         +figureTop(cardTop.Special)
-                  a.aBlue(href="#") дивитись усі плани
-                        .arrow
+                  a.aTop(href="#") дивитись усі плани
             hr 
             .row 
                .col-4 
@@ -73,7 +74,8 @@ html(lang="uk")
                      h2.c_h2.c0099ff.text-uppercase ЖИВИ ЯСКРАВО!
                      p.description Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
                      a.btn.rounded-pill.cta(href="#") детальніше
-                  .col-6 
+                  .col-6.frame-wraper.frame-main-wraper 
+                     .frame.frameLeft
                      picture 
                         img(src="img/''.png", alt="''")
                      p.comment.mx-auto.text-start.fst-italic Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи.
@@ -84,6 +86,7 @@ html(lang="uk")
                         source(srcset="img/client.webp", type="webp")
                         source(srcset="img/client.png", type="png")
                         img(src="img/client.png", alt="client")
+                     .frame.frameRight
          .container.mx-auto 
             h2.c_h2.special.text-uppercase Спеціальні пропозиції тижня 
             p.c333.fst-italic Гарячі праозиції, по-швидше обирай і поїхали!
@@ -105,7 +108,8 @@ html(lang="uk")
                   +figureBottom(cardBottom.Schedule)
                .col-sm-3 
                   +figureBottom(cardBottom.Info)
-               .col-sm-3 
+               .col-sm-3.frame-wraper.frame-footer-wraper  
+                  .frame.frame-footer.frameLeft
                   p.c333.question задати питання
                   p.c999.mx-auto Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
                   a.c0099ff(href="tel:+380505698511") +38 (050) 56 98 511
@@ -114,7 +118,8 @@ html(lang="uk")
                   picture                         
                      source(srcset="img/consult.webp", type="webp")
                      source(srcset="img/consult.png", type="png")
-                     img(src="img/consult.png", alt="consult")
+                     img(src="img/consult.png", alt="consult") 
+                  .frame.frame-footer.frameRight
       footer 
          .container-fluid.bg-footer 
          .container-fluid.bg-dark 

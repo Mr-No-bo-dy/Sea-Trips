@@ -64,18 +64,24 @@ header
 .cta 
    +ctaStyle
 
-.frame 
-   width: 47rem
+.header-header-wraper
+   // position: relative
+   .frameBottom
+      // position: absolute
+      // top: 22rem
+      // left: calc(50% - 23.5rem - 2px)
+      height: 9rem
+      border-top: none
+
+.frame-header 
+   width: 30rem
+   +media(500)
+      width: 47rem
    height: 4rem
-   background: transparent
    border: 4px solid rgba(255, 255, 255, .25)
 
 .frameTop
    border-bottom: none
-
-.frameBottom
-   height: 9rem
-   border-top: none
 
 .c_h2 
    color: #333
@@ -106,8 +112,17 @@ p.c_fefefe
    color: #fefefe
 
 .arrows  
-   width: 20px
-   height: 20px
+   display: block
+   position: relative
+   width: 1rem
+   height: 1rem
+   border-left: 3px solid #000
+   border-bottom: 3px solid #000
+   transform: rotate(-45deg)
+
+.arrows-2
+   // bottom: .5rem
+   bottom: 3px
 
 .cardTop 
    +cardStyle
@@ -131,21 +146,53 @@ picture.pic
    img
       width: 100%
 
-a.aBlue, 
-a.aYellow 
+a.aTop, 
+a.aMiddle 
    display: inline-block
    color: #0099ff
    font-size: 1.2rem
    text-transform: uppercase
    text-decoration: none
-   &:hover 
+   &:hover, 
+   &:hover:before, 
+   &:hover:after 
       transform: scale(1.1)
       color: #0080d6
+   &:hover:after 
+      transform: rotate(-45deg)
+   position: relative
+   &:before
+      position: absolute
+      content: ""
+      top: .3rem
+      // top: 3px
+      right: -1.6rem
+      width: 1.1rem
+      height: 1.1rem
+      border: 1px solid #0099ff
+      border-radius: 0.5rem
+   &:after
+      position: absolute
+      content: ""
+      top: 0.65rem
+      // top: 7px
+      right: -1.2rem
+      width: 0.4rem
+      height: 0.4rem
+      border-right: 1px solid #0099ff
+      border-bottom: 1px solid #0099ff
+      transform: rotate(-45deg)
 
-a.aYellow
+a.aMiddle
+   margin-right: 2.5rem
    color: #ffb700
    font-size: 1.3rem
-   &:hover 
+   &:before, 
+   &:after 
+      border-color: #ffb700
+   &:hover, 
+   &:hover:before, 
+   &:hover:after 
       color: #cc8800
 
 .bg-main 
@@ -169,6 +216,20 @@ a.aYellow
    p.client 
       font-size: 1.4rem
       line-height: 1.36em
+
+.frame-wraper
+   position: relative
+   .frame
+      position: absolute
+      top: 1rem
+      width: 20rem
+      height: 23rem
+      border: 4px solid rgba(255, 255, 255, .1)
+   .frameLeft
+      border-right: none
+   .frameRight
+      right: 1rem
+      border-left: none
 
 h2.special 
    line-height: 1.17em
@@ -204,6 +265,7 @@ h2.special
       line-height: 1.11em
       letter-spacing: 1px
    .question 
+      margin-top: -1rem
       font-size: 1.8rem
       line-height: 1.44em
       letter-spacing: 1px
@@ -224,6 +286,12 @@ h2.special
    .consultant 
       font-family: "PT Sans"
       line-height: 1.46em
+
+.frame.frame-footer
+   top: 0
+   width: 4.5rem
+   height: 26.5rem
+   border-color: #ffb700
 
 .bg-footer 
    padding-top: 370px
