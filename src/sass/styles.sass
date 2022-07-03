@@ -124,6 +124,10 @@ p.c_fefefe
    // bottom: .5rem
    bottom: 3px
 
+figure:hover 
+   img
+      filter: contrast(125%)
+
 .cardTop 
    +cardStyle
 
@@ -208,9 +212,12 @@ a.aMiddle
       max-width: 45rem
       font-family: "PT Sans"
    p.comment 
+      // margin-top: 1rem
+      // margin-bottom: 0
       max-width: 50rem
       line-height: 1.56em
-   b
+   p.client-name
+      font-weight: bold
       font-size: 1.8rem
       line-height: 1.44em
    p.client 
@@ -281,8 +288,8 @@ h2.special
       text-decoration: none
       &:hover
          color: #0088ff
-   .name 
-      margin: 1rem 0 0 0
+   // .name 
+   //    margin: 1rem 0 0 0
    .consultant 
       font-family: "PT Sans"
       line-height: 1.46em
