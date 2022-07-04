@@ -63,6 +63,48 @@ header
    h3 
       max-width: 32rem
 
+.header-menu
+   ul.nav
+      display: none
+      +media(992)
+         display: flex
+
+.hamburger
+   display: inline-block
+   +media(992)
+      display: none
+   position: relative
+   vertical-align: middle
+   // margin: 10px 20px
+   // +media(380)
+   //    margin: 0 10px
+   // padding: 5px
+   width: 40px
+   height: 30px
+   span,
+   span:before,
+   span:after
+      content: ""
+      position: absolute
+      width: 40px
+      height: 3px
+      top: calc(50% - 2px)
+      // left: 5px
+      left: 0
+      background-color: #fff
+      border-radius: 2px
+   span:before
+      top: -10px
+      left: 0
+   span:after
+      top: 10px
+      left: 0
+   &:hover span,
+   &:hover span:before,
+   &:hover span:after
+      cursor: pointer
+      background-color: #ffb700
+
 .cta 
    +ctaStyle
 
