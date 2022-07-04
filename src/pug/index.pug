@@ -27,54 +27,52 @@ html(lang="uk")
                   p.mx-auto.fst-italic Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
                   a.btn.rounded-pill.cta(href="#") детальніше
                   .frame-header.frameBottom.mx-auto
-               h2.c_h2.mx-auto.text-uppercase обери свій план подорожі
+               h3.c_h3.mx-auto.text-uppercase обери свій план подорожі
                p.mx-auto.c333.fst-italic Наша фірма - лідер на ринку у своїй сфері
                a.mx-auto.arrows(href="#main") 
                   a.mx-auto.arrows.arrows-2(href="#main")
       main#main 
          .container.mx-auto 
             .row 
-               .col-3.text-start 
-                  h2.c_h2.text-uppercase про нашу компанію
+               .col-12.col-md-6.col-lg-3.text-start 
+                  h3.c_h3.text-uppercase про нашу компанію
                   p.c555.fst-italic Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
                   a.btn.rounded-pill.cta(href="#") детальніше
                   p.cbbb * - зверніть увагу, зміна ціни може залежати від курсу долара.
-               .col-9
-                  .row
-                     .col-4 
-                        +figureTop(cardTop.Bycicle)
-                     .col-4 
-                        +figureTop(cardTop.Island)
-                     .col-4 
-                        +figureTop(cardTop.Special)
-                  a.aTop(href="#") дивитись усі плани
+               .col-12.col-md-6.col-lg-3 
+                  +figureTop(cardTop.Bycicle)
+               .col-12.col-md-6.col-lg-3 
+                  +figureTop(cardTop.Island)
+               .col-12.col-md-6.col-lg-3 
+                  +figureTop(cardTop.Special)
+            a.offset-lg-3.aTop(href="#") дивитись усі плани
             hr 
             .row 
-               .col-4 
+               .col-lg-4 
                   .island 
                      picture.pic 
                         source(srcset="img/island.webp", type="webp")
                         source(srcset="img/island.jpg", type="jpg")
                         img(src="img/island.jpg", alt="island")
-               .col-8.text-start 
-                  h2.c_h2.text-uppercase Дивовижний безлюдний острів, який зводить людей з розуму
+               .col-lg-8.text-start 
+                  h3.c_h3.text-uppercase Дивовижний безлюдний острів, який зводить людей з розуму
                   .row
-                     .col-7
+                     .col-12.col-lg-7
                         p.c333 Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
                         a.btn.rounded-pill.cta(href="#") замовити тур
                         a.btn.rounded-pill.cta(href="#") детальніше
-                     .col-5.card-half.text-center
-                        h3.price 575 грн./день
+                     .col-12.col-lg-5.card-half.text-center
+                        h4.price 575 грн./день
                         p.c999 В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
          .container-fluid.bg-main
             .container.mx-auto 
                .row 
-                  .col-6.text-start
+                  .col-12.col-lg-6.text-start
                      h2.c_h2.text-uppercase СПІЙМАЙ ХВИЛЮ 
                      h2.c_h2.c0099ff.text-uppercase ЖИВИ ЯСКРАВО!
                      p.description Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
                      a.btn.rounded-pill.cta(href="#") детальніше
-                  .col-6.frame-wraper.frame-main-wraper 
+                  .col-12.col-md-8.offset-md-2.col-lg-6.offset-lg-0.frame-wraper.frame-main-wraper 
                      .frame.frameLeft
                      picture 
                         img(src="img/''.png", alt="''")
@@ -87,27 +85,29 @@ html(lang="uk")
                         img(src="img/client.png", alt="client")
                      .frame.frameRight
          .container.mx-auto 
-            h2.c_h2.special.text-uppercase Спеціальні пропозиції тижня 
+            h3.c_h3.special.text-uppercase Спеціальні пропозиції тижня 
             p.c333.fst-italic Гарячі праозиції, по-швидше обирай і поїхали!
             .row 
-               .col-3 
+               .col-12.col-md-6.col-lg-3 
                   +figureMiddle(cardMiddle.Romantic)
-               .col-3 
+               .col-12.col-md-6.col-lg-3 
                   +figureMiddle(cardMiddle.Bycicle)
-               .col-3 
+               .col-12.col-md-6.col-lg-3 
                   +figureMiddle(cardMiddle.Islands)
-               .col-3 
+               .col-12.col-md-6.col-lg-3 
                   +figureMiddle(cardMiddle.Surfing)
             hr 
          .container.info.mx-auto 
             .row 
-               .col-3 
-                  h2.c_h2.text-uppercase додаткова інформація
-               .col-3 
-                  +figureBottom(cardBottom.Schedule)
-               .col-3 
-                  +figureBottom(cardBottom.Info)
-               .col-3.frame-wraper.frame-footer-wraper  
+               .col-12.col-sm-12.col-lg-3 
+                  h3.c_h3.text-uppercase додаткова інформація
+               .col-12.col-sm-12.col-lg-6
+                  .row
+                     .col-12.col-sm-6 
+                        +figureBottom(cardBottom.Schedule)
+                     .col-12.col-sm-6 
+                        +figureBottom(cardBottom.Info)
+               .col-12.col-sm-6.offset-sm-3.col-lg-3.offset-lg-0.frame-wraper.frame-footer-wraper  
                   .frame.frame-footer.frameLeft
                   p.c333.question задати питання
                   p.c999.my-4.mx-auto Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання

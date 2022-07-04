@@ -15,7 +15,7 @@ mixin figureTop (item)
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
          p.card-subtitle.c333.title= item.title
-         h3.price.card-title.m-0= item.price + " грн*"
+         h4.price.card-title.m-0= item.price + " грн*"
          p.card-text.text-start.c999.description= item.description
 
 mixin figureMiddle (item) 
@@ -29,7 +29,7 @@ mixin figureMiddle (item)
          p.c333.title= item.title
          p.c999.card-text.description= item.description
          .d-flex.justify-content-between
-            h3.price.card-title.m-0= item.price + " грн"
+            h4.price.card-title.m-0= item.price + " грн"
             a.aMiddle.my-4.mr-3(href="#") замовити
 
 mixin figureBottom (item) 
