@@ -265,7 +265,7 @@ h2.special
       left: 1.5rem
       width: 15px
       height: 11px
-      background: url(../img/cloud.png) no-repeat center
+      background: url(../img/cloud.png) no-repeat center/contain
 
 .info 
    h2 
@@ -273,19 +273,30 @@ h2.special
       letter-spacing: 1px
    .question 
       margin-top: -1rem
+      margin-bottom: 2rem
       font-size: 1.8rem
       line-height: 1.44em
       letter-spacing: 1px
    p.c999 
-      max-width: 15rem
+      max-width: 16rem
       line-height: 1.23em
-   a.c0099ff 
+   a.tel 
       cursor: pointer
       color: #0099ff
       font-size: 1.8rem
       line-height: 1.44em
       text-transform: uppercase
       text-decoration: none
+      display: inline-block
+      position: relative
+      &:before 
+         position: absolute
+         content: ""
+         top: .4rem
+         left: -2rem
+         width: 1.6rem
+         height: 1.7rem
+         background: url(../img/phone.png) no-repeat center/contain
       &:hover
          color: #0088ff
    // .name 
@@ -293,13 +304,14 @@ h2.special
    .consultant 
       font-family: "PT Sans"
       line-height: 1.46em
-
+   
 .frame.frame-footer
    top: 0
    width: 4.5rem
    height: 26.5rem
    border-color: #ffb700
 
+   
 .bg-footer 
    padding-top: 370px
    background: url(../img/bg-footer-2.jpg) no-repeat center/cover
