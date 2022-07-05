@@ -25,19 +25,19 @@ html(lang="uk")
                   .frame-header.frameTop.mx-auto
                   h1.text-uppercase Морські пригоди 
                   p.happy.mx-auto.fst-italic Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
-                  a.btn.rounded-pill.cta(href="#") детальніше
+                  //- .div-cta
+                     a.btn.rounded-pill.cta(href="#") детальніше
                   .frame-header.frameBottom.mx-auto
+                     a.btn.rounded-pill.cta(href="#") детальніше
                h3.c_h3.mx-auto.text-uppercase обери свій план подорожі
                p.mx-auto.c333.fst-italic Наша фірма - лідер на ринку у своїй сфері
-               a.mx-auto.arrows.arrows-1(href="#main") 
-                  a.mx-auto.arrows.arrows-2(href="#main")
-               //- .arrows
-               //-    a.mx-auto.arrow-1(href="#main") 
-               //-       a.mx-auto.arrow-2(href="#main")
+               a.aArrows(href="#main")
+                  span.mx-auto.arrows.arrow-1 
+                  span.mx-auto.arrows.arrow-2
       main#main 
          .container.mx-auto 
             .about
-               .row 
+               .row
                   .col-12.col-md-6.col-lg-3.text-start 
                      h3.c_h3.text-uppercase про нашу компанію
                      p.c555.fst-italic Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
@@ -52,7 +52,7 @@ html(lang="uk")
                .div-aTop
                   a.offset-lg-3.aTop(href="#") дивитись усі плани
             hr 
-            .row.island 
+            .row.gy-2.island 
                .col-lg-4 
                   .island-pic 
                      picture.pic 
@@ -130,4 +130,4 @@ html(lang="uk")
          .container-fluid.bg-dark 
             p.container.m-0.mx-auto.copyright &copy; 2016 Cars.com All rights reserved.
 
-      <script src="js/scripts.js"></script>
+      script(src="js/scripts.js")

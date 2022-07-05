@@ -86,9 +86,10 @@ p.in-logo
          margin-left: 2.5rem
    ul.active-burger 
       display: block
-      position: absolute
-      right: 0
-      // left: -4.5rem
+      // position: absolute
+      // right: 0
+      position: fixed
+      right: .5rem
       z-index: 1
       li
          margin: 0
@@ -141,11 +142,10 @@ p.in-logo
 
 .cta 
    +ctaStyle
-   z-index: 2
+
 
 .frame-header-wraper
    margin: 13rem 0 20rem
-   position: relative
    .frame-header 
       width: 30rem
       +media(500)
@@ -155,12 +155,34 @@ p.in-logo
    .frameTop
       border-bottom: none
    .frameBottom
-      position: absolute
-      top: 22rem
-      left: calc(50% - 23.5rem - 2px)
       height: 9rem
       border-top: none
-      z-index: 1
+
+// .frame-header-wraper
+//    margin: 13rem 0 20rem
+//    position: relative
+//    .div-cta 
+//       position: relative
+//       .cta 
+//          position: absolute
+//          top: 2rem
+//          transform: translate(-50%, -50%)
+//          z-index: 1
+//    .frame-header 
+//       width: 30rem
+//       +media(500)
+//          width: 47rem
+//       height: 4rem
+//       border: 4px solid rgba(255, 255, 255, .25)
+//    .frameTop
+//       border-bottom: none
+//    .frameBottom
+//       position: absolute
+//       top: 22rem
+//       // transform: translate(-50%, -50%)
+//       left: calc(50% - 23.5rem - 2px)
+//       height: 9rem
+//       border-top: none
 
 .c_h3 
    color: #333
@@ -192,44 +214,26 @@ p.c999
 p.c_fefefe 
    color: #fefefe
 
-.arrows  
-   display: block
+a.aArrows 
+   display: inline-block
+   width: 2rem
+   height: 2rem
    position: relative
-   width: 1rem
-   height: 1rem
-   border-left: 3px solid #000
-   border-bottom: 3px solid #000
-   transform: rotate(-45deg)
-.arrows-1:hover,
-.arrows-1:hover
-   .arrows-2
-      transform: rotate(-45deg) scale(1.5)
-      border-color: #fff
-   // &:hover, 
-   // &:hover 
-   //    .arrows-2 
-   //       transform: rotate(-45deg) scale(1.2)
-   //       border-color: #fff
-
-// .arrows  
-//    // display: inline-block
-//    a 
-//       display: block
-//       position: relative
-//       width: 1rem
-//       height: 1rem
-//       border-left: 3px solid #000
-//       border-bottom: 3px solid #000
-//       transform: rotate(-45deg)
-//    // .arrow-1:hover, 
-//    .arrow-1:hover 
-//       .arrow-2 
-//          transform: rotate(-45deg) scale(1.2)
-//          border-color: #fff
-
-.arrows-2
-   // bottom: .5rem
-   bottom: 3px
+   &:hover .arrow-1, 
+   &:hover .arrow-2 
+      transform: rotate(-45deg) scale(1.3)
+      border-color: #333
+   .arrows
+      display: block
+      width: 1rem
+      height: 1rem
+      border-left: 3px solid #000
+      border-bottom: 3px solid #000
+      transform: rotate(-45deg)
+   .arrow-2
+      // position: absolute
+      // bottom: .5rem
+      // bottom: -2px
 
 .about 
    padding: 3rem 0
@@ -246,7 +250,8 @@ p.c_fefefe
    // column-gap: 3rem
 .row>*
    // margin: 0
-   padding: 0 1.5rem
+   padding: 0
+   // padding: 0 1.5rem
 
 figure:hover 
    img
@@ -291,6 +296,7 @@ a.aMiddle
    &:hover:after 
       transform: scale(1.1)
       color: #0080d6
+      border-color: #0080d6
    &:hover:after 
       transform: rotate(-45deg)
    position: relative

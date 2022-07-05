@@ -19,11 +19,11 @@ mixin figureTop (item)
 
 mixin figureMiddle (item) 
    figure(class="card cardMiddle text-start " + item.class)
-      picture.card-img-top.pic 
+      picture(class="card-img-top pic " + item.imgClass) 
          source(srcset=item.src + ".webp" type="image/webp") 
          source(srcset=item.src + ".jpg" type="image/jpg") 
+         //- img(src=item.src + ".jpg" alt=item.alt) 
          img(src=item.src + ".jpg" alt=item.alt) 
-         //- img(src=item.src + ".jpg" alt=item.alt class=item.imgClass) 
       figcaption.cardMiddleBody 
          p.c333.title= item.title
          p.c999.card-text.description= item.description
