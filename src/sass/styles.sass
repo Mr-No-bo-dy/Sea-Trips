@@ -28,7 +28,8 @@ p
    line-height: 1.5em
 
 .container
-   max-width: 1170px
+   // max-width: 1170px
+   max-width: 117rem
 
 .bg-header 
    background: url(../img/bg-header-2.jpg) no-repeat center/cover 
@@ -43,13 +44,6 @@ p.in-logo
    .in-logo
       color: #ffb700
 
-.header-menu 
-   a 
-      font-size: 1.4rem
-      color: #fff
-      &:hover 
-         color: #ffb700
-
 header 
    color: #fff
    h1 
@@ -63,11 +57,33 @@ header
    h3 
       max-width: 32rem
 
+.header-menu 
+   a 
+      font-size: 1.4rem
+      color: #fff
+      &:hover 
+         color: #ffb700
+
 .header-menu
-   ul.nav
+   position: relative
+   ul.menu
       display: none
       +media(992)
          display: flex
+   ul.active-burger 
+      display: block
+      position: absolute
+      right: 0
+      // left: -4.5rem
+      a 
+         display: block
+         padding: 1rem 1.5rem
+         border: 1px solid #fff
+         border-radius: 3px
+         background-color: #ffb700
+         &:hover 
+            background-color: #09f
+      // animation: fadeIn 1s ease
 
 .hamburger
    display: inline-block
@@ -81,6 +97,7 @@ header
    // padding: 5px
    width: 40px
    height: 30px
+   cursor: pointer
    span,
    span:before,
    span:after
@@ -108,7 +125,7 @@ header
 .cta 
    +ctaStyle
 
-.header-header-wraper
+.frame-header-wraper
    // position: relative
    .frameBottom
       // position: absolute
@@ -165,6 +182,32 @@ p.c_fefefe
    border-left: 3px solid #000
    border-bottom: 3px solid #000
    transform: rotate(-45deg)
+.arrows-1:hover,
+.arrows-1:hover
+   .arrows-2
+      transform: rotate(-45deg) scale(1.5)
+      border-color: #fff
+   // &:hover, 
+   // &:hover 
+   //    .arrows-2 
+   //       transform: rotate(-45deg) scale(1.2)
+   //       border-color: #fff
+
+// .arrows  
+//    // display: inline-block
+//    a 
+//       display: block
+//       position: relative
+//       width: 1rem
+//       height: 1rem
+//       border-left: 3px solid #000
+//       border-bottom: 3px solid #000
+//       transform: rotate(-45deg)
+//    // .arrow-1:hover, 
+//    .arrow-1:hover 
+//       .arrow-2 
+//          transform: rotate(-45deg) scale(1.2)
+//          border-color: #fff
 
 .arrows-2
    // bottom: .5rem
@@ -180,8 +223,8 @@ figure:hover
 .triangle
    +triangle
 
-.vrow
-   +vrow
+.vstrip
+   +vstrip
 
 h4.price 
    color: #0099ff
@@ -258,7 +301,7 @@ a.aMiddle
       color: #0099ff
    p.description 
       width: 100%
-      +media(769)
+      +media(992)
          max-width: 45rem
       font-family: "PT Sans"
    p.comment 
@@ -328,7 +371,7 @@ h3.special
       line-height: 1.44em
       letter-spacing: 1px
    p.c999 
-      max-width: 32rem
+      max-width: 30rem
       +media (768)
          max-width: 16rem
       line-height: 1.23em
