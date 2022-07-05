@@ -3,7 +3,7 @@ mixin menu (items)
       span
    ul.menu 
       for item in items 
-         li.ms-5 
+         li 
             a.py-2.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
 
 mixin figureTop (item) 

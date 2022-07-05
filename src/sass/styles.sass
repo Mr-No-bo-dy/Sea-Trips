@@ -82,11 +82,16 @@ p.in-logo
       display: none
       +media(992)
          display: flex
+      li
+         margin-left: 2.5rem
    ul.active-burger 
       display: block
       position: absolute
       right: 0
       // left: -4.5rem
+      z-index: 1
+      li
+         margin: 0
       a 
          display: block
          padding: 1rem 1.5rem
@@ -237,6 +242,7 @@ p.c_fefefe
    //    max-width: 27rem
 
 .row
+   row-gap: 3rem
    // column-gap: 3rem
 .row>*
    // margin: 0
@@ -321,6 +327,9 @@ a.aMiddle
    &:hover:before, 
    &:hover:after 
       color: #cc8800
+
+hr 
+   margin: 0
 
 .island
    margin: 3rem 0
