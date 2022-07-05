@@ -21,6 +21,7 @@ body
 
 ul
    list-style-type: none
+   margin: 0
    padding: 0
 
 p 
@@ -44,20 +45,31 @@ p.in-logo
    .in-logo
       color: #ffb700
 
-header 
+.header
+   .wrapper 
+      padding: 2rem 0
+      +media(768)
+         padding: 4rem 0
    color: #fff
    h1 
       font-size: 6rem
       +media(768)
          font-size: 7.2rem
-   p 
+   p.happy
+      margin-bottom: 2.5rem 
       max-width: 60rem
       // font-size: 1.6rem
       // line-height: 1.5em
    h3 
       max-width: 32rem
+   p.c333
+      margin: 2rem 0 3.5rem
 
-.header-menu 
+
+.top-menu 
+   // margin-bottom: 3rem 0
+   // +media(768)
+   //    margin-bottom: 7rem 0
    a 
       font-size: 1.4rem
       color: #fff
@@ -124,25 +136,26 @@ header
 
 .cta 
    +ctaStyle
+   z-index: 2
 
 .frame-header-wraper
-   // position: relative
+   margin: 13rem 0 20rem
+   position: relative
+   .frame-header 
+      width: 30rem
+      +media(500)
+         width: 47rem
+      height: 4rem
+      border: 4px solid rgba(255, 255, 255, .25)
+   .frameTop
+      border-bottom: none
    .frameBottom
-      // position: absolute
-      // top: 22rem
-      // left: calc(50% - 23.5rem - 2px)
+      position: absolute
+      top: 22rem
+      left: calc(50% - 23.5rem - 2px)
       height: 9rem
       border-top: none
-
-.frame-header 
-   width: 30rem
-   +media(500)
-      width: 47rem
-   height: 4rem
-   border: 4px solid rgba(255, 255, 255, .25)
-
-.frameTop
-   border-bottom: none
+      z-index: 1
 
 .c_h3 
    color: #333
@@ -213,6 +226,22 @@ p.c_fefefe
    // bottom: .5rem
    bottom: 3px
 
+.about 
+   padding: 3rem 0
+   +media(768)
+      padding: 4.5rem 0
+   p.c555 
+      margin: 2.5rem 0
+   p.cbbb
+      margin: 0
+   //    max-width: 27rem
+
+.row
+   // column-gap: 3rem
+.row>*
+   // margin: 0
+   padding: 0 1.5rem
+
 figure:hover 
    img
       filter: contrast(125%)
@@ -232,12 +261,17 @@ h4.price
    line-height: 1.83em
 
 .card-half
-   padding: 3rem 6rem
+   padding: 3rem 5.5rem
    background-color: #edf2f5
 
 picture.pic 
    img
       width: 100%
+
+.div-aTop
+   margin: 1.5rem 0
+   +media(768)
+      margin: 0 0 2.5rem
 
 a.aTop, 
 a.aMiddle 
@@ -288,9 +322,20 @@ a.aMiddle
    &:hover:after 
       color: #cc8800
 
+.island
+   margin: 3rem 0
+   +media(768)
+      margin: 7rem 0
+   p.c333
+      margin: 2rem 0 3.5rem
+      
 .bg-main 
    background: url(../img/bg-main-2a.jpg) no-repeat center/cover
    color: #fff
+   .surfing 
+      padding: 4rem 0
+      +media(768)
+         padding: 9rem 0
    .c_h2 
       color: #fff
       font-size: 4.7rem
@@ -300,6 +345,7 @@ a.aMiddle
    h2.c0099ff 
       color: #0099ff
    p.description 
+      margin: 3rem 0
       width: 100%
       +media(992)
          max-width: 45rem
@@ -331,8 +377,14 @@ a.aMiddle
       right: 1rem
       border-left: none
 
-h3.special 
-   line-height: 1.17em
+.special
+   padding: 4rem 0
+   +media(768)
+      padding: 7rem 0 8.5rem
+   h3.h-special 
+      line-height: 1.17em
+   p.c333 
+      margin-bottom: 3rem
 
 .cardMiddle 
    // +cardStyle($middle:true)
@@ -361,6 +413,9 @@ h3.special
       background: url(../img/cloud.png) no-repeat center/contain
 
 .info 
+   padding: 4rem 0
+   +media(768)
+      padding: 8.5rem 0
    h2 
       line-height: 1.11em
       letter-spacing: 1px

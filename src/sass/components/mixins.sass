@@ -35,7 +35,8 @@
 =cardStyle($middle:false)
    margin: 0
    padding: 3rem
-   // width: 27rem
+   +media(992)
+      max-width: 27rem
    // height: 27rem
    box-sizing: border-box
    border: none
@@ -72,7 +73,7 @@
    border-radius: 0
    background-color: transparent
    .cardMiddleBody
-      padding: 2rem 2rem 1rem
+      padding: 2rem 2rem 0
    p.title 
       font-size: 1.8rem
       line-height: 1.44em

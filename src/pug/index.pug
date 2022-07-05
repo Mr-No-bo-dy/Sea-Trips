@@ -12,21 +12,19 @@ html(lang="uk")
    body 
       header.header 
          .container-fluid.bg-header 
-            .container.mx-auto 
-               .d-flex.align-items-center.justify-content-between 
+            .container.wrapper.mx-auto 
+               .top-menu.d-flex.align-items-center.justify-content-between 
                   .logo 
                      a.d-inline-block(href="index.html") 
                         picture.align-middle 
                            img.align-top(src="img/logo.png", alt="logo")
                         p.mx-2.in-logo.d-inline-block trips
-                  //- .hamburger
-                  //-    span
                   nav.header-menu 
                      +menu(navMenu)
                .frame-header-wraper
                   .frame-header.frameTop.mx-auto
                   h1.text-uppercase Морські пригоди 
-                  p.mx-auto.fst-italic Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                  p.happy.mx-auto.fst-italic Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
                   a.btn.rounded-pill.cta(href="#") детальніше
                   .frame-header.frameBottom.mx-auto
                h3.c_h3.mx-auto.text-uppercase обери свій план подорожі
@@ -38,23 +36,25 @@ html(lang="uk")
                //-       a.mx-auto.arrow-2(href="#main")
       main#main 
          .container.mx-auto 
-            .row 
-               .col-12.col-md-6.col-lg-3.text-start 
-                  h3.c_h3.text-uppercase про нашу компанію
-                  p.c555.fst-italic Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-                  a.btn.rounded-pill.cta(href="#") детальніше
-                  p.cbbb * - зверніть увагу, зміна ціни може залежати від курсу долара.
-               .col-12.col-md-6.col-lg-3 
-                  +figureTop(cardTop.Bycicle)
-               .col-12.col-md-6.col-lg-3 
-                  +figureTop(cardTop.Island)
-               .col-12.col-md-6.col-lg-3 
-                  +figureTop(cardTop.Special)
-            a.offset-lg-3.aTop(href="#") дивитись усі плани
+            .about
+               .row 
+                  .col-12.col-md-6.col-lg-3.text-start 
+                     h3.c_h3.text-uppercase про нашу компанію
+                     p.c555.fst-italic Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                     a.btn.rounded-pill.my-4.cta(href="#") детальніше
+                     p.cbbb * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                  .col-12.col-md-6.col-lg-3 
+                     +figureTop(cardTop.Bycicle)
+                  .col-12.col-md-6.col-lg-3 
+                     +figureTop(cardTop.Island)
+                  .col-12.col-md-6.col-lg-3 
+                     +figureTop(cardTop.Special)
+               .div-aTop
+                  a.offset-lg-3.aTop(href="#") дивитись усі плани
             hr 
-            .row 
+            .row.island 
                .col-lg-4 
-                  .island 
+                  .island-pic 
                      picture.pic 
                         source(srcset="img/island.webp", type="webp")
                         source(srcset="img/island.jpg", type="jpg")
@@ -64,13 +64,13 @@ html(lang="uk")
                   .row
                      .col-12.col-lg-7
                         p.c333 Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
-                        a.btn.rounded-pill.cta(href="#") замовити тур
+                        a.btn.rounded-pill.me-3.cta(href="#") замовити тур
                         a.btn.rounded-pill.cta(href="#") детальніше
                      .col-12.col-lg-5.card-half.text-center
                         h4.price 575 грн./день
                         p.c999 В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
          .container-fluid.bg-main
-            .container.mx-auto 
+            .container.surfing.mx-auto 
                .row 
                   .col-12.col-lg-6.text-start
                      h2.c_h2.text-uppercase СПІЙМАЙ ХВИЛЮ 
@@ -90,17 +90,18 @@ html(lang="uk")
                         img(src="img/client.png", alt="client")
                      .frame.frameRight
          .container.mx-auto 
-            h3.c_h3.special.text-uppercase Спеціальні пропозиції тижня 
-            p.c333.fst-italic Гарячі праозиції, по-швидше обирай і поїхали!
-            .row 
-               .col-12.col-md-6.col-lg-3 
-                  +figureMiddle(cardMiddle.Romantic)
-               .col-12.col-md-6.col-lg-3 
-                  +figureMiddle(cardMiddle.Bycicle)
-               .col-12.col-md-6.col-lg-3 
-                  +figureMiddle(cardMiddle.Islands)
-               .col-12.col-md-6.col-lg-3 
-                  +figureMiddle(cardMiddle.Surfing)
+            .special
+               h3.c_h3.h-special.text-uppercase Спеціальні пропозиції тижня 
+               p.c333.fst-italic Гарячі праозиції, по-швидше обирай і поїхали!
+               .row 
+                  .col-12.col-md-6.col-lg-3 
+                     +figureMiddle(cardMiddle.Romantic)
+                  .col-12.col-md-6.col-lg-3 
+                     +figureMiddle(cardMiddle.Bycicle)
+                  .col-12.col-md-6.col-lg-3 
+                     +figureMiddle(cardMiddle.Islands)
+                  .col-12.col-md-6.col-lg-3 
+                     +figureMiddle(cardMiddle.Surfing)
             hr 
          .container.info.mx-auto 
             .row 
