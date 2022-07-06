@@ -34,16 +34,12 @@ mixin figureMiddle (item)
 mixin figureBottom (item) 
    figure.card.cardBottom.text-start  
       figcaption 
-         picture.card-img.pic                         
-            source(srcset=item.src + ".webp" type="image/webp") 
-            source(srcset=item.src + ".jpg" type="image/jpg") 
-            img(src=item.src + ".jpg" alt=item.alt) 
-         .card-img-overlay
+         div(class="bg-picture " + item.figureBG)
             .d-flex.gap-3
                .paper.flex-shrink-0
                .file
                   p.card-title.title= item.title
                   p.cbbb= "Розмір файла: " + item.size
             p.c_fefefe.card-text.description= item.description
-            a.btn.rounded-pill.btn.rounded-pill.ctaBottom.mt-4(href="#") скачати
+            a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href="#") скачати
                span.cloud

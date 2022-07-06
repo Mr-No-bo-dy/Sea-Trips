@@ -3,8 +3,12 @@
       @content
 
 =ctaStyle ($ctaBottom:false)
+   transform: scale(0.9)
+   +media(1280)
+      transform: scale(1)
    display: inline-block
-   padding: 0.9rem 2.7rem
+   padding: 0.9rem 2.5rem
+   min-width: 18rem
    color: #fefefe
    font-size: 1.6rem
    letter-spacing: 1px
@@ -19,26 +23,22 @@
       background-color: #fefefe
    @if $ctaBottom
       padding: 0.5rem 1.8rem 0.5rem 3.4rem
+      min-width: 11rem
       font-size: 1.2rem
       color: #ffb700
       border: 2px solid #ffb700
       background-color: transparent
       &:hover
-         transform: scale(1.1)
+         transform: scale(1.15)
          color: #ffb700
          border-color: #ffb700
          background-color: #fff
-         // color: #fff
-         // border-color: #fff
-         // background-color: #0099ff
 
-=cardStyle($middle:false)
+// =cardStyle($middle:false)
+=cardStyle
    margin: 0
    padding: 3rem
-   +media(992)
-      max-width: 27rem
-   // height: 27rem
-   box-sizing: border-box
+   min-height: 27rem
    border: none
    border-radius: 0
    background-color: transparent
@@ -56,29 +56,20 @@
    &:hover 
       background-color: #fff
       box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)
-   // @if $middle
-   //    padding: 0
-   //    .pic 
-   //       margin: 0
-   //       min-height: 19rem
-   //    .cardMiddleBody
-   //       padding: 2.5rem 2rem
-
-   // max-width: 27rem
 
 =cardMiddleStyle
-   // width: 27rem
+   min-height: 35rem
    box-sizing: border-box
    border: none
    border-radius: 0
    background-color: transparent
    .cardMiddleBody
-      padding: 2rem 2rem 0
+      padding: 2rem 2rem 1rem
    p.title 
       font-size: 1.8rem
       line-height: 1.44em
    p.c999 
-      margin: 0
+      margin-bottom: 0.5rem
       color: #999
    &:hover
       background-color: #fff
