@@ -22,7 +22,6 @@ mixin figureMiddle (item)
       picture(class="card-img-top pic " + item.imgClass) 
          source(srcset=item.src + ".webp" type="image/webp") 
          source(srcset=item.src + ".jpg" type="image/jpg") 
-         //- img(src=item.src + ".jpg" alt=item.alt) 
          img(src=item.src + ".jpg" alt=item.alt) 
       figcaption.cardMiddleBody 
          p.c333.title= item.title
@@ -32,14 +31,13 @@ mixin figureMiddle (item)
             a.aMiddle.my-4.mr-3(href="#") замовити
 
 mixin figureBottom (item) 
-   figure.card.cardBottom.text-start  
+   figure(class="card cardBottom text-start bg-picture " + item.figureBG)
       figcaption 
-         div(class="bg-picture " + item.figureBG)
-            .d-flex.gap-3
-               .paper.flex-shrink-0
-               .file
-                  p.card-title.title= item.title
-                  p.cbbb= "Розмір файла: " + item.size
-            p.c_fefefe.card-text.description= item.description
-            a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href="#") скачати
-               span.cloud
+         .d-flex.gap-4
+            .paper.flex-shrink-0
+            .file
+               p.card-title.title= item.title
+               p.cbbb= "Розмір файла: " + item.size
+         p.c_fefefe.card-text.description= item.description
+         a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href="#") скачати
+            span.cloud

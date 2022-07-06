@@ -396,10 +396,13 @@ hr
    h3 
       line-height: 1.11em
       letter-spacing: 1px
+   p.card-title
+      +media(1024)
+         max-width: 15rem
    .c_fefefe
       +media(768)
          min-height: 7.6rem
-      margin-bottom: 2rem
+      margin-bottom: 2.5rem
    .question 
       margin-top: -1rem
       margin-bottom: 2rem
@@ -412,14 +415,14 @@ hr
          max-width: 16rem
       line-height: 1.23em
    a.tel 
+      display: inline-block
+      position: relative
       cursor: pointer
       color: #0099ff
       font-size: 1.8rem
       line-height: 1.44em
       text-transform: uppercase
       text-decoration: none
-      display: inline-block
-      position: relative
       &:before 
          position: absolute
          content: ""
@@ -436,18 +439,17 @@ hr
 
 .cardBottom 
    color: #fff
-   .bg-picture 
-      height: 27rem 
-      padding: 3rem 2rem
-   .schedule 
-      background: url(../img/info-1.jpg) no-repeat center/cover
-   .info-2
-      background: url(../img/info-2.jpg) no-repeat center/cover
+   height: 27rem 
+   padding: 2.5rem 2rem
    .paper
       width: 3.4rem
       height: 4.2rem
       background: url(../img/paper.png) no-repeat center/contain
- 
+.schedule
+   background: url(../img/schedule.jpg) no-repeat center/cover
+.food
+   background: url(../img/food.jpg) no-repeat center/cover
+
 .ctaBottom 
    +ctaStyle($ctaBottom:true)
    position: relative
