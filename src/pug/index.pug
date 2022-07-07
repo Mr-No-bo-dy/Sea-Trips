@@ -10,7 +10,7 @@ html(lang="uk")
       link(rel="stylesheet" href="css/styles.css")
       title Sea Trips
    body 
-      header.header 
+      header.header#header 
          .container-fluid.bg-header 
             .wrapper.container.mx-auto 
                .d-flex.align-items-center.justify-content-between 
@@ -40,7 +40,7 @@ html(lang="uk")
                      p.c-555.fst-italic Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
                      a.btn.rounded-pill.my-4.cta(href="#") детальніше
                      p.c-bbb * - зверніть увагу, зміна ціни може залежати від курсу долара.
-                  .column.col-12.col-md-6.col-lg-3 
+                  .column.col-12.col-md-6.col-lg-3#services 
                      +figureTop(cardTop.Bycicle)
                   .column.col-12.col-md-6.col-lg-3 
                      +figureTop(cardTop.Island)
@@ -76,7 +76,7 @@ html(lang="uk")
                      h2.c-h2.c0099ff.m-0.text-uppercase ЖИВИ ЯСКРАВО!
                      p.description Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
                      a.btn.rounded-pill.cta(href="#") детальніше
-                  .column.col-12.col-md-8.offset-md-2.col-lg-6.offset-lg-0.frameClient 
+                  .column.col-12.col-md-8.offset-md-2.col-lg-6.offset-lg-0.frameClient#comment 
                      picture 
                         img(src="img/''.png", alt="''")
                      p.comment.my-2.mx-auto.text-start.fst-italic Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи.
@@ -87,7 +87,7 @@ html(lang="uk")
                         source(srcset="img/client.png", type="png")
                         img(src="img/client.png", alt="client")
          .wrapper.container.mx-auto 
-            .special
+            .special#special
                .wrap
                   h3.c-h3.h-special.text-uppercase Спеціальні пропозиції тижня 
                   p.choose.c-333.fst-italic Гарячі пропозиції, по-швидше обирай і поїхали!
@@ -111,7 +111,7 @@ html(lang="uk")
                         +figureBottom(cardBottom.Schedule)
                      .column.col-12.col-sm-6 
                         +figureBottom(cardBottom.Info)
-               .column.col-12.col-sm-6.offset-sm-3.col-lg-3.offset-lg-0.frameConsultant 
+               .column.col-12.col-sm-6.offset-sm-3.col-lg-3.offset-lg-0.frameConsultant#contacts 
                   p.c-333.question задати питання
                   p.c-999.my-4.mx-auto Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
                   a.tel.my-4.c0099ff(href="tel:+380505698511") +38 (050) 56 98 511
