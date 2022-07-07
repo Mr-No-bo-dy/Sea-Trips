@@ -49,24 +49,25 @@ html(lang="uk")
                .div-aTop
                   a.offset-lg-3.aTop(href="#") дивитись усі плани
             hr.about-island
-            .island.row.flex 
-               .column.col-12.col-lg-4 
-                  .island-pic 
-                     picture.pic 
-                        source(srcset="img/island.webp", type="webp")
-                        source(srcset="img/island.jpg", type="jpg")
-                        img(src="img/island.jpg", alt="island")
-               .column.col-12.col-lg-8.text-start 
-                  h3.c-h3.text-uppercase Дивовижний безлюдний острів, який зводить людей з розуму
-                  .row.flex
-                     .in-col.col-12.col-lg-7
-                        p.c-333 Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
-                        a.btn.rounded-pill.cta.ctaWide.me-3(href="#") замовити тур
-                        a.btn.rounded-pill.cta(href="#") детальніше
-                     .in-col.col-12.col-lg-5
-                        .card-half.text-center
-                           h4.price 575 грн./день
-                           p.c-999 В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+            .island
+               .row.flex 
+                  .column.col-12.col-lg-4 
+                     .island-pic 
+                        picture.pic 
+                           source(srcset="img/island.webp", type="webp")
+                           source(srcset="img/island.jpg", type="jpg")
+                           img(src="img/island.jpg", alt="island")
+                  .column.col-12.col-lg-8.text-start 
+                     h3.c-h3.text-uppercase Дивовижний безлюдний острів, який зводить людей з розуму
+                     .row.flex
+                        .in-col.col-12.col-lg-7
+                           p.c-333 Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                           a.btn.rounded-pill.cta.ctaWide.me-3(href="#") замовити тур
+                           a.btn.rounded-pill.cta(href="#") детальніше
+                        .in-col.col-12.col-lg-5
+                           .card-half.text-center
+                              h4.price 575 грн./день
+                              p.c-999 В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
          .container-fluid.bg-main
             .wrapper.container.surfing.mx-auto 
                .row.flex 
@@ -87,8 +88,9 @@ html(lang="uk")
                         img(src="img/client.png", alt="client")
          .wrapper.container.mx-auto 
             .special
-               h3.c-h3.h-special.text-uppercase Спеціальні пропозиції тижня 
-               p.choose.c-333.fst-italic Гарячі пропозиції, по-швидше обирай і поїхали!
+               .wrap
+                  h3.c-h3.h-special.text-uppercase Спеціальні пропозиції тижня 
+                  p.choose.c-333.fst-italic Гарячі пропозиції, по-швидше обирай і поїхали!
                .row.flex 
                   .column.col-12.col-md-6.col-lg-3 
                      +figureMiddle(cardMiddle.Romantic)
@@ -103,7 +105,7 @@ html(lang="uk")
             .row.flex 
                .column.col-12.col-lg-3 
                   h3.c-h3.text-uppercase додаткова інформація
-               .col-12.col-lg-6
+               .in-col.col-12.col-lg-6
                   .row.flex
                      .column.col-12.col-sm-6 
                         +figureBottom(cardBottom.Schedule)
