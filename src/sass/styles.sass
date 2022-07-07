@@ -166,6 +166,8 @@ p.in-logo
 
 .cta 
    +ctaStyle
+.ctaWide
+   letter-spacing: 0
 
 .frame-header 
    width: 30rem
@@ -323,7 +325,10 @@ a.aMiddle
 
 hr 
    margin: 0
-   // margin: 0 0.75rem
+hr.special-info
+   margin: 0 1.5rem
+   +media(769)
+      margin: 0 1rem
 
 .island
    padding: 4rem 0
@@ -337,7 +342,11 @@ hr
       margin: -0.5rem 0 1rem
    p.c-333
       margin: 0 0 2rem
-      
+   .in-col 
+      padding: 0
+      +media(992)
+         padding: 0 0.75rem
+
 .bg-main 
    background: url(../img/bg-main-2a.jpg) no-repeat center/cover
    color: #fff
@@ -354,7 +363,7 @@ hr
    h2.c0099ff 
       color: #0099ff
    p.description 
-      margin: 3rem 0
+      margin: 2rem 0 3rem
       width: 100%
       +media(992)
          max-width: 45rem
@@ -464,7 +473,7 @@ hr
 .schedule
    background: url(../img/schedule.jpg) no-repeat left top/cover
 .food
-   background: url(../img/food.jpg) no-repeat left top/cover
+   background: url(../img/food.jpg) no-repeat left bottom/cover
 
 .ctaBottom 
    +ctaStyle($ctaBottom:true)
