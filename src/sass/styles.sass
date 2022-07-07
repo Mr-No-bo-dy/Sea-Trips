@@ -99,14 +99,16 @@ p.in-logo
    ul.active-burger 
       display: block
       position: fixed
-      top: 9rem
+      top: 9.5rem
       right: 1.5rem
+      @media screen and (max-width: 424px)
+         width: 92.5%
       z-index: 1
       li
          margin: 0
       a 
          display: block
-         padding: 1rem 1.5rem
+         padding: 1rem 3rem
          background-color: #ffb700
          &:hover 
             background-color: #09f
@@ -289,6 +291,7 @@ a.aMiddle
       transform: scale(1.2)
       color: #0080d6
       border-color: #0080d6
+      transition: all .5s linear
    &:hover:after 
       transform: rotate(-45deg)
    position: relative
@@ -357,6 +360,9 @@ a.aMiddle
       font-family: "PT Sans"
    p.comment 
       max-width: 50rem
+      min-height: 12rem
+      +media(768)
+         min-height: 9rem
       line-height: 1.56em
    p.client-name
       font-weight: bold
@@ -463,8 +469,8 @@ a.aMiddle
    +frame($consultant:true)
 
 .bg-footer 
-   padding-top: 37rem
-   background: url(../img/bg-footer.jpg) no-repeat center/cover
+   padding-top: 40rem
+   background: linear-gradient(180deg, #f5f8fa 0%, #f5f8fa 1%, transparent 25%, transparent 100%), url(../img/bg-footer.jpg) no-repeat center/cover
 
 .copyright 
    padding: 1.5rem

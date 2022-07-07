@@ -7,7 +7,7 @@ mixin menu (items)
             a.py-2.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
 
 mixin figureTop (item) 
-   figure(class="card cardTop " + item.class)
+   figure(class="card cardTop d-flex align-stretch " + item.class)
       figcaption 
          picture.card-img-top 
             source(srcset=item.src + ".webp" type="image/webp") 

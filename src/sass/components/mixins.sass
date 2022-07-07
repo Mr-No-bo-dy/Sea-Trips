@@ -18,6 +18,7 @@
       color: #0099ff
       border-color: #0099ff
       background-color: #fefefe
+      transition: all .5s linear
    @if $ctaBottom
       padding: 0.5rem 1.8rem 0.5rem 3.4rem
       min-width: 11rem
@@ -55,7 +56,7 @@
    @if $top
       margin-bottom: 1rem
       padding: 3rem
-      min-height: 27rem
+      min-height: 31rem
       h4.price
          line-height: 1em
       picture 
@@ -108,10 +109,14 @@
       &:before,
       &:after
          top: 1rem
-         width: 14rem
+         width: 13rem
          +media(426)
             width: 20rem
-         height: 23rem
+         height: 27rem
+         +media(768)
+            height: 25rem
+         +media(1024)
+            height: 23rem
       &:before
          +media(576)
             left: 0
@@ -122,8 +127,10 @@
       &:before,
       &:after
          top: 0
-         width: 8rem
          height: 26.5rem
+         width: 8rem
          +media(769)
-            width: 4rem
+            width: 3.5rem
+         +media(1280)
+            width: 4.5rem
          border-color: #ffb700
