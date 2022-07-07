@@ -13,9 +13,9 @@ mixin figureTop (item)
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
-         p.card-subtitle.c333.title= item.title
+         p.card-subtitle.c-333.title= item.title
          h4.price.card-title= item.price + " грн*"
-         p.card-text.text-start.c999.description= item.description
+         p.card-text.description.text-start.c-999= item.description
 
 mixin figureMiddle (item) 
    figure(class="card cardMiddle text-start " + item.class)
@@ -24,10 +24,10 @@ mixin figureMiddle (item)
          source(srcset=item.src + ".jpg" type="image/jpg") 
          img(src=item.src + ".jpg" alt=item.alt) 
       figcaption.cardMiddleBody 
-         p.c333.title= item.title
-         p.c999.card-text.description= item.description
+         p.card-title.title.c-333= item.title
+         p.card-text.description.c-999= item.description
          .d-flex.justify-content-between
-            h4.price.card-title.m-0= item.price + " грн"
+            h4.price.m-0= item.price + " грн"
             a.aMiddle.my-4.mr-3(href="#") замовити
 
 mixin figureBottom (item) 
@@ -37,7 +37,7 @@ mixin figureBottom (item)
             .paper.flex-shrink-0
             .file
                p.card-title.title= item.title
-               p.cbbb= "Розмір файла: " + item.size
-         p.c_fefefe.card-text.description= item.description
+               p.c-bbb= "Розмір файла: " + item.size
+         p.c-fefefe.card-text.description= item.description
          a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href="#") скачати
             span.cloud
