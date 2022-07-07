@@ -31,20 +31,10 @@
          border-color: #ffb700
          background-color: #fff
 
-// =cardStyle($middle:false)
-=cardStyle
-   margin: 0
-   padding: 3rem
-   min-height: 27rem
+=cardStyle($top:false, $middle:false)
    border: none
    border-radius: 0
    background-color: transparent
-   picture 
-      display: inline-flex
-      align-items: center
-      justify-content: center
-      height: 53px
-      margin-bottom: 2rem
    p.title 
       font-size: 1.8rem
       line-height: 1.44em
@@ -53,31 +43,27 @@
    &:hover 
       background-color: #fff
       box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)
-
-=cardMiddleStyle
-   min-height: 35rem
-   border: none
-   border-radius: 0
-   background-color: transparent
-   .cardMiddleBody
-      padding: 2rem 2rem 1rem
-   p.title 
-      font-size: 1.8rem
-      line-height: 1.44em
-   p.c-999 
-      margin-bottom: 0.5rem
-      color: #999
-   &:hover
-      background-color: #fff
-      box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)
+   @if $top
+      padding: 3rem
+      min-height: 27rem
+      picture 
+         display: inline-flex
+         align-items: center
+         justify-content: center
+         height: 53px
+         margin-bottom: 2rem
+   @if $middle 
+      min-height: 35rem
+      .cardMiddleBody
+         padding: 2rem 2rem 1rem
+      p.c-999 
+         margin-bottom: 0.5rem
 
 =vstrip
    position: relative
    &:before
       content: ""
       position: absolute
-      top: 0
-      left: 0
       width: 6rem
       height: 100%
       background: #0099ff url(../img/vstrip.png) no-repeat center/contain

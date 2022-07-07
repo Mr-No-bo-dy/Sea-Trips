@@ -22,9 +22,9 @@ body
    scroll-behavior: smooth
 
 ul
-   list-style-type: none
    margin: 0
    padding: 0
+   list-style-type: none
 
 p 
    font-size: 1.6rem
@@ -32,24 +32,18 @@ p
 
 figure 
    margin: 0
-   
-// .wrapper
-   // margin: 0 auto
-   // max-width: 117rem
 
 .flex
    margin: 0
    row-gap: 3rem
-   // column-gap: 3rem
 .flex>*
    margin: 0
-   // padding: 0
 
 .column
    padding: 0 1.5rem
       
 .bg-header 
-   background: url(../img/bg-header-2.jpg) no-repeat center/cover 
+   background: url(../img/bg-header.jpg) no-repeat center/cover 
 
 p.in-logo
    color: #fff
@@ -72,8 +66,6 @@ p.in-logo
    p.happy
       margin-bottom: 2.5rem 
       max-width: 60rem
-      // font-size: 1.6rem
-      // line-height: 1.5em
    h3 
       max-width: 32rem
    p.c-333
@@ -183,33 +175,6 @@ p.in-logo
    height: 9rem
    border-top: none
 
-.c-h3 
-   color: #333
-   font-size: 3rem
-   +media(768)
-      font-size: 3.6rem
-   line-height: 1.22em
-
-p.c-333 
-   color: #333
-   // font-size: 1.6rem
-   // line-height: 1.5em
-
-p.c-555 
-   color: #555
-   // font-size: 1.6rem
-   line-height: 1.375em
-
-p.c-bbb, 
-p.c-999,
-.c-fefefe
-   color: #bbb
-   font-size: 1.3rem
-   line-height: 1.46em
-
-p.c-999 
-   color: #999
-
 a.aArrows 
    display: inline-block
    width: 2rem
@@ -240,13 +205,42 @@ figure:hover
       filter: contrast(125%)
 
 .cardTop 
-   +cardStyle
+   +cardStyle($top:true)
 
 .triangle
    +triangle
 
 .vstrip
    +vstrip
+
+.c-h3 
+   color: #333
+   font-size: 3rem
+   +media(768)
+      font-size: 3.6rem
+   line-height: 1.22em
+
+p.c-333 
+   color: #333
+
+p.c-555 
+   color: #555
+   line-height: 1.375em
+
+p.c-bbb, 
+p.c-999,
+p.c-fefefe
+   color: #bbb
+   font-size: 1.3rem
+   line-height: 1.46em
+
+p.c-999 
+   color: #999
+
+hr.about-island
+   margin: 0
+   +media(769)
+      margin: 0 1.5rem
 
 h4.price 
    color: #0099ff
@@ -292,7 +286,6 @@ a.aMiddle
       position: absolute
       content: ""
       top: .3rem
-      // top: 3px
       right: -1.6rem
       width: 1.1rem
       height: 1.1rem
@@ -302,7 +295,6 @@ a.aMiddle
       position: absolute
       content: ""
       top: 0.65rem
-      // top: 7px
       right: -1.2rem
       width: 0.4rem
       height: 0.4rem
@@ -323,8 +315,6 @@ a.aMiddle
       color: #ff8e00
       border-color: #ff8e00
 
-hr 
-   margin: 0
 hr.special-info
    margin: 0 1.5rem
    +media(769)
@@ -348,7 +338,7 @@ hr.special-info
          padding: 0 0.75rem
 
 .bg-main 
-   background: url(../img/bg-main-2a.jpg) no-repeat center/cover
+   background: url(../img/bg-main.jpg) no-repeat top right/cover
    color: #fff
    .surfing 
       padding: 4rem 0
@@ -409,8 +399,7 @@ hr.special-info
       margin-bottom: 3rem
 
 .cardMiddle 
-   // +cardStyle($middle:true)
-   +cardMiddleStyle
+   +cardStyle($middle:true)
 
 .info 
    padding: 4rem 0
@@ -506,7 +495,7 @@ hr.special-info
 
 .bg-footer 
    padding-top: 370px
-   background: url(../img/bg-footer-2.jpg) no-repeat center/cover
+   background: url(../img/bg-footer.jpg) no-repeat center/cover
 
 .copyright 
    padding: 1.5rem
