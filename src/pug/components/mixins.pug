@@ -13,8 +13,9 @@ mixin figureTop (item)
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
-         p.card-subtitle.c-333.title= item.title
-         h4.price.card-title= item.price + " грн*"
+         p.card-title.title.c-333
+            span.text-center= item.title
+         h4.price= item.price + " грн*"
          p.card-text.description.text-start.c-999= item.description
 
 mixin figureMiddle (item) 
@@ -24,10 +25,11 @@ mixin figureMiddle (item)
          source(srcset=item.src + ".jpg" type="image/jpg") 
          img(src=item.src + ".jpg" alt=item.alt) 
       figcaption.cardMiddleBody 
-         p.card-title.title.c-333= item.title
+         p.card-title.title.c-333
+            span.text-center= item.title
          p.card-text.description.c-999= item.description
          .d-flex.justify-content-between
-            h4.price.m-0= item.price + " грн"
+            h4.price= item.price + " грн"
             a.aMiddle.my-4.mr-3(href="#") замовити
 
 mixin figureBottom (item) 
@@ -36,7 +38,8 @@ mixin figureBottom (item)
          .d-flex.gap-4
             .paper.flex-shrink-0
             .file
-               p.card-title.title= item.title
+               p.card-title.title
+                  span.text-center= item.title
                p.c-bbb= "Розмір файла: " + item.size
          p.c-fefefe.card-text.description= item.description
          a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href="#") скачати

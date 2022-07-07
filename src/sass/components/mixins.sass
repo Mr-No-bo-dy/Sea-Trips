@@ -36,28 +36,38 @@
    border-radius: 0
    background-color: transparent
    p.title 
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0
+      min-height: 5.2rem
       font-size: 1.8rem
       line-height: 1.44em
-   p.c-999 
+   p.description 
+      margin: 0
+      min-height: 7.6rem
       color: #999
+   h4.price
+      margin: 0 0 1rem
    &:hover 
       background-color: #fff
       box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)
    @if $top
+      margin-bottom: 1rem
       padding: 3rem
       min-height: 27rem
+      h4.price
+         line-height: 1em
       picture 
          display: inline-flex
          align-items: center
          justify-content: center
          height: 53px
-         margin-bottom: 2rem
+         margin-bottom: 1rem
    @if $middle 
       min-height: 35rem
       .cardMiddleBody
-         padding: 2rem 2rem 1rem
-      p.c-999 
-         margin-bottom: 0.5rem
+         padding: 1rem 2rem
 
 =vstrip
    position: relative
