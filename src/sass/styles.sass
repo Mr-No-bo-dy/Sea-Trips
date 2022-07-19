@@ -214,10 +214,6 @@ a.aArrows
    p.c-bbb
       margin: 0
 
-figure:hover 
-   img
-      filter: contrast(125%)
-
 .cardTop 
    +cardStyle($top:true)
 
@@ -273,13 +269,16 @@ picture.pic
    img
       width: 100%
 
-.div-aTop
-   margin: 1.5rem 0
+a.aTop 
+   margin-top: 1.5rem
+   margin-bottom: 1.5rem
    +media(768)
-      margin: 0 0 2.5rem
+      margin-top: 2.5rem
+      margin-bottom: 2.5rem
 
 a.aTop, 
 a.aMiddle 
+   margin-right: 1.4rem
    display: inline-block
    color: #0099ff
    font-size: 1.2rem
@@ -393,6 +392,9 @@ a.aMiddle
    +media(768)
       padding: 8.5rem 0
    h3 
+      text-align: center
+      +media(992)
+         text-align: left
       line-height: 1.11em
       letter-spacing: 1px
    p.title
@@ -471,6 +473,9 @@ a.aMiddle
 .bg-footer 
    padding-top: 40rem
    background: linear-gradient(180deg, #f5f8fa 0%, transparent 25%), url(../img/bg-footer.jpg) no-repeat center/cover
+
+.dark-bg 
+   background: #1a1a1a
 
 .copyright 
    padding: 1.5rem
