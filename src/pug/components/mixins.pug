@@ -1,4 +1,4 @@
-mixin menu (items) 
+mixin menu(items) 
    .hamburger
       span
    ul.menu 
@@ -6,41 +6,40 @@ mixin menu (items)
          li 
             a.py-2.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
 
-mixin figureTop (item) 
+mixin figureTop(item) 
    figure(class="card cardTop d-flex align-stretch " + item.class)
       figcaption 
          picture.card-img-top 
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
-         p.card-title.title.c-333
-            span.text-center= item.title
-         h4.price= item.price + " грн*"
+         h3.card-title.title.c-333.text-center= item.title
+         p
+            strong.price= item.price + " грн*"
          p.card-text.description.text-start.c-999= item.description
 
-mixin figureMiddle (item) 
+mixin figureMiddle(item) 
    figure(class="card cardMiddle text-start " + item.class)
       picture(class="card-img-top pic " + item.imgClass) 
          source(srcset=item.src + ".webp" type="image/webp") 
          source(srcset=item.src + ".jpg" type="image/jpg") 
          img(src=item.src + ".jpg" alt=item.alt) 
       figcaption.cardMiddleBody 
-         p.card-title.title.c-333
-            span.text-center= item.title
+         h3.card-title.justify-content-start.title.c-333= item.title
          p.card-text.description.c-999= item.description
          .d-flex.justify-content-between
-            h4.price= item.price + " грн"
-            a.aMiddle.my-4.mr-3(href="#") замовити
+            p
+               strong.price= item.price + " грн."
+            a.aMiddle.my-4.mr-3(href=item.url) замовити
 
-mixin figureBottom (item) 
-   figure(class="card cardBottom text-start bg-picture " + item.figureBG)
+mixin figureBottom(item) 
+   figure(class="card cardBottom text-start bg-picture " + item.class)
       figcaption 
          .d-flex.gap-4
             .paper.flex-shrink-0
             .file
-               p.card-title.title
-                  span.text-center= item.title
+               h3.card-title.title= item.title
                p.c-bbb= "Розмір файла: " + item.size
          p.c-fefefe.card-text.description= item.description
-         a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href="#") скачати
+         a.btn.rounded-pill.btn.rounded-pill.ctaBottom(href=item.url) скачати
             span.cloud
