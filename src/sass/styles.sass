@@ -98,8 +98,15 @@ p.in-logo
 
 .header-menu
    position: relative
-   ul.menu
+   nav.nav-menu
       display: none
+      +media(992)
+         display: block
+   nav.adapted-nav
+      display: block
+   @media screen and (max-width: 991px)
+      +adaptedMenu()
+   ul.menu
       +media(992)
          display: flex
          column-gap: 2.5rem
@@ -108,28 +115,6 @@ p.in-logo
          color: #fff
          &:hover 
             color: $colorLight
-   ul.active-burger 
-      display: block
-      position: fixed
-      top: 9.5rem
-      right: 1.5rem
-      @media screen and (max-width: 425px)
-         width: 92.5%
-      z-index: 3
-      li
-         margin: 0
-      a 
-         display: block
-         padding: 1rem 3rem
-         background-color: $colorLight
-         &:hover 
-            background-color: $colorDark
-      li:first-child a
-         border-radius: 3px 3px 0 0
-      li:last-child a
-         border-radius: 0 0 3px 3px
-      li:not(:last-child) a 
-         border-bottom: 1px solid #fff
 
 .hamburger
    display: inline-block
@@ -162,9 +147,10 @@ p.in-logo
       background-color: $colorLight
 
 .hamburger.hamburger-open
-   position: fixed
-   top: 5rem
-   right: 1.25rem
+   // position: fixed
+   // top: 5rem
+   // right: 1.25rem
+   right: 0
    span 
       background-color: transparent
       &::before, 

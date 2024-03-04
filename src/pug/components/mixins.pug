@@ -1,10 +1,11 @@
 mixin menu(items) 
    .hamburger
       span
-   ul.menu 
-      for item in items 
-         li 
-            a.py-2.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
+   nav.nav-menu
+      ul.menu 
+         for item in items 
+            li 
+               a.py-2.text-uppercase.text-decoration-none(href=item.url) #{item.name} 
 
 mixin figureTop(item) 
    figure(class="card cardTop d-flex align-stretch " + item.class)
